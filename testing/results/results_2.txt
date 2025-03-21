@@ -1,0 +1,2062 @@
+=== Pre-invoke Interpreter State ===
+Interpreter has 467 tensors and 168 nodes
+Inputs: 0
+Outputs: 227
+
+Tensor   0 serving_default_input_3:0 kTfLiteFloat32  kTfLiteArenaRw      12288 bytes ( 0.0 MB)  1 32 32 3
+Tensor   1 model_2/dense_2/MatMul kTfLiteFloat32   kTfLiteMmapRo       2560 bytes ( 0.0 MB)  10 64
+Tensor   2 model_2/batch_normalization_137/FusedBatchNormV3 kTfLiteFloat32   kTfLiteMmapRo        256 bytes ( 0.0 MB)  64
+Tensor   3 model_2/global_average_pooling2d_2/Mean/reduction_indices kTfLiteInt32   kTfLiteMmapRo          8 bytes ( 0.0 MB)  2
+Tensor   4 Const                kTfLiteFloat32   kTfLiteMmapRo          4 bytes ( 0.0 MB) 
+Tensor   5 model_2/conv2d_107/Conv2D kTfLiteFloat32   kTfLiteMmapRo       2048 bytes ( 0.0 MB)  32 1 1 16
+Tensor   6 model_2/conv2d_103/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor   7 model_2/conv2d_104/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor   8 model_2/conv2d_100/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor   9 model_2/conv2d_101/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor  10 model_2/conv2d_98/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor  11 model_2/conv2d_97/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor  12 model_2/conv2d_95/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor  13 model_2/conv2d_94/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor  14 model_2/conv2d_92/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor  15 model_2/conv2d_91/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor  16 model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp kTfLiteFloat32   kTfLiteMmapRo        128 bytes ( 0.0 MB)  32
+Tensor  17 model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp kTfLiteFloat32   kTfLiteMmapRo        256 bytes ( 0.0 MB)  64
+Tensor  18 model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp kTfLiteFloat32   kTfLiteMmapRo         64 bytes ( 0.0 MB)  16
+Tensor  19 model_2/conv2d_89/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1728 bytes ( 0.0 MB)  16 3 3 3
+Tensor  20 model_2/conv2d_90/Conv2D kTfLiteInt8   kTfLiteMmapRo       2304 bytes ( 0.0 MB)  16 3 3 16
+Tensor  21 model_2/conv2d_93/Conv2D kTfLiteInt8   kTfLiteMmapRo       2304 bytes ( 0.0 MB)  16 3 3 16
+Tensor  22 model_2/conv2d_96/Conv2D kTfLiteInt8   kTfLiteMmapRo       2304 bytes ( 0.0 MB)  16 3 3 16
+Tensor  23 model_2/conv2d_99/Conv2D kTfLiteInt8   kTfLiteMmapRo       2304 bytes ( 0.0 MB)  16 3 3 16
+Tensor  24 model_2/conv2d_102/Conv2D kTfLiteInt8   kTfLiteMmapRo       2304 bytes ( 0.0 MB)  16 3 3 16
+Tensor  25 model_2/conv2d_105/Conv2D kTfLiteInt8   kTfLiteMmapRo       4608 bytes ( 0.0 MB)  32 3 3 16
+Tensor  26 model_2/conv2d_106/Conv2D kTfLiteInt8   kTfLiteMmapRo       9216 bytes ( 0.0 MB)  32 3 3 32
+Tensor  27 model_2/conv2d_108/Conv2D kTfLiteInt8   kTfLiteMmapRo       9216 bytes ( 0.0 MB)  32 3 3 32
+Tensor  28 model_2/conv2d_110/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  29 model_2/conv2d_109/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  30 model_2/conv2d_111/Conv2D kTfLiteInt8   kTfLiteMmapRo       9216 bytes ( 0.0 MB)  32 3 3 32
+Tensor  31 model_2/conv2d_113/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  32 model_2/conv2d_112/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  33 model_2/conv2d_114/Conv2D kTfLiteInt8   kTfLiteMmapRo       9216 bytes ( 0.0 MB)  32 3 3 32
+Tensor  34 model_2/conv2d_116/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  35 model_2/conv2d_115/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  36 model_2/conv2d_117/Conv2D kTfLiteInt8   kTfLiteMmapRo       9216 bytes ( 0.0 MB)  32 3 3 32
+Tensor  37 model_2/conv2d_119/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  38 model_2/conv2d_118/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  39 model_2/conv2d_120/Conv2D kTfLiteInt8   kTfLiteMmapRo       9216 bytes ( 0.0 MB)  32 3 3 32
+Tensor  40 model_2/conv2d_122/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  41 model_2/conv2d_121/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  42 model_2/conv2d_125/Conv2D kTfLiteInt8   kTfLiteMmapRo       2048 bytes ( 0.0 MB)  64 1 1 32
+Tensor  43 model_2/conv2d_123/Conv2D kTfLiteInt8   kTfLiteMmapRo      18432 bytes ( 0.0 MB)  64 3 3 32
+Tensor  44 model_2/conv2d_124/Conv2D kTfLiteInt8   kTfLiteMmapRo      36864 bytes ( 0.0 MB)  64 3 3 64
+Tensor  45 model_2/conv2d_126/Conv2D kTfLiteInt8   kTfLiteMmapRo      36864 bytes ( 0.0 MB)  64 3 3 64
+Tensor  46 model_2/conv2d_128/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  47 model_2/conv2d_127/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  48 model_2/conv2d_129/Conv2D kTfLiteInt8   kTfLiteMmapRo      36864 bytes ( 0.0 MB)  64 3 3 64
+Tensor  49 model_2/conv2d_131/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  50 model_2/conv2d_130/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  51 model_2/conv2d_132/Conv2D kTfLiteInt8   kTfLiteMmapRo      36864 bytes ( 0.0 MB)  64 3 3 64
+Tensor  52 model_2/conv2d_134/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  53 model_2/conv2d_133/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  54 model_2/conv2d_135/Conv2D kTfLiteInt8   kTfLiteMmapRo      36864 bytes ( 0.0 MB)  64 3 3 64
+Tensor  55 model_2/conv2d_137/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  56 model_2/conv2d_136/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  57 model_2/conv2d_138/Conv2D kTfLiteInt8   kTfLiteMmapRo      36864 bytes ( 0.0 MB)  64 3 3 64
+Tensor  58 model_2/conv2d_140/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  59 model_2/conv2d_139/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  60 model_2/batch_normalization_87/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_89/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  61 model_2/average_pooling2d_34/AvgPool kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  62 model_2/re_lu_85/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  63 model_2/tf.math.multiply_30/Mul kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  64 model_2/re_lu_87/Relu;model_2/add_60/add kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  65 model_2/re_lu_86/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  66 model_2/batch_normalization_88/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_90/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  67 model_2/batch_normalization_89/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_91/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  68 model_2/add_61/add   kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  69 model_2/batch_normalization_90/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_92/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  70 model_2/add_61/add_1 kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  71 model_2/average_pooling2d_35/AvgPool kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  72 model_2/re_lu_88/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  73 model_2/tf.math.multiply_31/Mul kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  74 model_2/re_lu_90/Relu;model_2/add_62/add kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  75 model_2/re_lu_89/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  76 model_2/batch_normalization_91/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_93/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  77 model_2/batch_normalization_92/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_94/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  78 model_2/add_63/add   kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  79 model_2/batch_normalization_93/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_95/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  80 model_2/add_63/add_1 kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  81 model_2/average_pooling2d_36/AvgPool kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  82 model_2/re_lu_91/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  83 model_2/tf.math.multiply_32/Mul kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  84 model_2/re_lu_93/Relu;model_2/add_64/add kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  85 model_2/re_lu_92/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  86 model_2/batch_normalization_94/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_96/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  87 model_2/batch_normalization_95/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_97/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  88 model_2/add_65/add   kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  89 model_2/batch_normalization_96/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_98/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  90 model_2/add_65/add_1 kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  91 model_2/average_pooling2d_37/AvgPool kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  92 model_2/re_lu_94/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  93 model_2/tf.math.multiply_33/Mul kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  94 model_2/re_lu_96/Relu;model_2/add_66/add kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  95 model_2/batch_normalization_99/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_101/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  96 model_2/re_lu_95/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  97 model_2/batch_normalization_98/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_100/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  98 model_2/batch_normalization_97/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_99/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  99 model_2/add_67/add   kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 100 model_2/add_67/add_1 kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 101 model_2/average_pooling2d_38/AvgPool kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 102 model_2/re_lu_97/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 103 model_2/batch_normalization_100/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_102/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 104 model_2/tf.math.multiply_34/Mul kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 105 model_2/re_lu_99/Relu;model_2/add_68/add kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 106 model_2/batch_normalization_102/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_104/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 107 model_2/re_lu_98/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 108 model_2/batch_normalization_101/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_103/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 109 model_2/add_69/add   kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 110 model_2/add_69/add_1 kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 111 model_2/average_pooling2d_39/AvgPool kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 16 16 16
+Tensor 112 model_2/conv2d_107/Conv2D1 kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 113 model_2/re_lu_100/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 114 model_2/re_lu_101/Relu;model_2/batch_normalization_103/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_105/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 115 model_2/batch_normalization_104/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_106/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 116 model_2/tf.__operators__.add_4/AddV2 kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 117 model_2/average_pooling2d_40/AvgPool kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 118 model_2/re_lu_102/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 119 model_2/batch_normalization_105/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_108/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 120 model_2/tf.math.multiply_35/Mul kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 121 model_2/re_lu_104/Relu;model_2/add_70/add kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 122 model_2/batch_normalization_107/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_110/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 123 model_2/re_lu_103/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 124 model_2/batch_normalization_106/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_109/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 125 model_2/add_71/add   kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 126 model_2/add_71/add_1 kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 127 model_2/average_pooling2d_41/AvgPool kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 128 model_2/re_lu_105/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 129 model_2/batch_normalization_108/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_111/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 130 model_2/tf.math.multiply_36/Mul kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 131 model_2/re_lu_107/Relu;model_2/add_72/add kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 132 model_2/batch_normalization_110/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_113/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 133 model_2/re_lu_106/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 134 model_2/batch_normalization_109/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_112/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 135 model_2/add_73/add   kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 136 model_2/add_73/add_1 kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 137 model_2/average_pooling2d_42/AvgPool kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 138 model_2/re_lu_108/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 139 model_2/batch_normalization_111/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_114/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 140 model_2/tf.math.multiply_37/Mul kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 141 model_2/re_lu_110/Relu;model_2/add_74/add kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 142 model_2/batch_normalization_113/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_116/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 143 model_2/re_lu_109/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 144 model_2/batch_normalization_112/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_115/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 145 model_2/add_75/add   kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 146 model_2/add_75/add_1 kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 147 model_2/average_pooling2d_43/AvgPool kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 148 model_2/re_lu_111/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 149 model_2/batch_normalization_114/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_117/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 150 model_2/tf.math.multiply_38/Mul kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 151 model_2/re_lu_113/Relu;model_2/add_76/add kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 152 model_2/batch_normalization_116/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_119/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 153 model_2/re_lu_112/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 154 model_2/batch_normalization_115/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_118/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 155 model_2/add_77/add   kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 156 model_2/add_77/add_1 kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 157 model_2/average_pooling2d_44/AvgPool kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 158 model_2/re_lu_114/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 159 model_2/batch_normalization_117/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_120/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 160 model_2/tf.math.multiply_39/Mul kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 161 model_2/re_lu_116/Relu;model_2/add_78/add kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 162 model_2/batch_normalization_119/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_122/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 163 model_2/re_lu_115/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 164 model_2/batch_normalization_118/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_121/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 165 model_2/add_79/add   kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 166 model_2/add_79/add_1 kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 167 model_2/average_pooling2d_45/AvgPool kTfLiteFloat32  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 8 8 32
+Tensor 168 model_2/conv2d_125/Conv2D1 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 169 model_2/re_lu_117/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 170 model_2/re_lu_118/Relu;model_2/batch_normalization_120/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_123/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 171 model_2/batch_normalization_121/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_124/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 172 model_2/tf.__operators__.add_5/AddV2 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 173 model_2/average_pooling2d_46/AvgPool kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 174 model_2/re_lu_119/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 175 model_2/batch_normalization_122/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_126/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 176 model_2/tf.math.multiply_40/Mul kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 177 model_2/re_lu_121/Relu;model_2/add_80/add kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 178 model_2/batch_normalization_124/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_128/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 179 model_2/re_lu_120/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 180 model_2/batch_normalization_123/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_127/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 181 model_2/add_81/add   kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 182 model_2/add_81/add_1 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 183 model_2/average_pooling2d_47/AvgPool kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 184 model_2/re_lu_122/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 185 model_2/batch_normalization_125/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_129/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 186 model_2/tf.math.multiply_41/Mul kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 187 model_2/re_lu_124/Relu;model_2/add_82/add kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 188 model_2/batch_normalization_127/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_131/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 189 model_2/re_lu_123/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 190 model_2/batch_normalization_126/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_130/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 191 model_2/add_83/add   kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 192 model_2/add_83/add_1 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 193 model_2/average_pooling2d_48/AvgPool kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 194 model_2/re_lu_125/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 195 model_2/batch_normalization_128/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_132/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 196 model_2/tf.math.multiply_42/Mul kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 197 model_2/re_lu_127/Relu;model_2/add_84/add kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 198 model_2/batch_normalization_130/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_134/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 199 model_2/re_lu_126/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 200 model_2/batch_normalization_129/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_133/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 201 model_2/add_85/add   kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 202 model_2/add_85/add_1 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 203 model_2/average_pooling2d_49/AvgPool kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 204 model_2/re_lu_128/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 205 model_2/batch_normalization_131/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_135/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 206 model_2/tf.math.multiply_43/Mul kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 207 model_2/re_lu_130/Relu;model_2/add_86/add kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 208 model_2/batch_normalization_133/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_137/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 209 model_2/re_lu_129/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 210 model_2/batch_normalization_132/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_136/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 211 model_2/add_87/add   kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 212 model_2/add_87/add_1 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 213 model_2/average_pooling2d_50/AvgPool kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 214 model_2/re_lu_131/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 215 model_2/batch_normalization_134/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_138/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 216 model_2/tf.math.multiply_44/Mul kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 217 model_2/re_lu_133/Relu;model_2/add_88/add kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 218 model_2/batch_normalization_136/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_140/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 219 model_2/re_lu_132/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 220 model_2/batch_normalization_135/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_139/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 221 model_2/add_89/add   kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 222 model_2/add_89/add_1 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 223 model_2/batch_normalization_137/FusedBatchNormV31 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 224 model_2/re_lu_134/Relu;model_2/batch_normalization_137/FusedBatchNormV3 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 225 model_2/global_average_pooling2d_2/Mean kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  1 64
+Tensor 226 model_2/dense_2/MatMul;model_2/dense_2/BiasAdd kTfLiteFloat32  kTfLiteArenaRw         40 bytes ( 0.0 MB)  1 10
+Tensor 227 StatefulPartitionedCall:0 kTfLiteFloat32  kTfLiteArenaRw         40 bytes ( 0.0 MB)  1 10
+Tensor 228 (null)               kTfLiteInt32  kTfLiteArenaRw         16 bytes ( 0.0 MB)  4
+Tensor 229 (null)               kTfLiteInt32  kTfLiteArenaRw          8 bytes ( 0.0 MB)  2
+Tensor 230 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 231 (null)               kTfLiteNoType  kTfLiteMemNone          0 bytes ( 0.0 MB)  (null)
+Tensor 232 (null)               kTfLiteNoType  kTfLiteMemNone          0 bytes ( 0.0 MB)  (null)
+Tensor 233 (null)               kTfLiteNoType  kTfLiteMemNone          0 bytes ( 0.0 MB)  (null)
+Tensor 234 (null)               kTfLiteNoType  kTfLiteMemNone          0 bytes ( 0.0 MB)  (null)
+Tensor 235 (null)               kTfLiteNoType  kTfLiteMemNone          0 bytes ( 0.0 MB)  (null)
+Tensor 236 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1728 bytes ( 0.0 MB)  27 16
+Tensor 237 (null)               kTfLiteInt8  kTfLiteArenaRw     147456 bytes ( 0.1 MB)  1 32 32 144
+Tensor 238 (null)               kTfLiteInt8  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 32 32 16
+Tensor 239 (null)               kTfLiteFloat32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 240 (null)               kTfLiteInt32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  16 1024
+Tensor 241 (null)               kTfLiteInt32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 242 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent         64 bytes ( 0.0 MB)  16
+Tensor 243 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 244 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 245 (null)               kTfLiteInt8  kTfLiteArenaRw     147456 bytes ( 0.1 MB)  1 32 32 144
+Tensor 246 (null)               kTfLiteInt8  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 32 32 16
+Tensor 247 (null)               kTfLiteFloat32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 248 (null)               kTfLiteInt32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  16 1024
+Tensor 249 (null)               kTfLiteInt32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 250 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent         64 bytes ( 0.0 MB)  16
+Tensor 251 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 252 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 253 (null)               kTfLiteInt8  kTfLiteArenaRw     147456 bytes ( 0.1 MB)  1 32 32 144
+Tensor 254 (null)               kTfLiteInt8  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 32 32 16
+Tensor 255 (null)               kTfLiteFloat32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 256 (null)               kTfLiteInt32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  16 1024
+Tensor 257 (null)               kTfLiteInt32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 258 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent         64 bytes ( 0.0 MB)  16
+Tensor 259 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 260 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 261 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 262 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 263 (null)               kTfLiteInt8  kTfLiteArenaRw     147456 bytes ( 0.1 MB)  1 32 32 144
+Tensor 264 (null)               kTfLiteInt8  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 32 32 16
+Tensor 265 (null)               kTfLiteFloat32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 266 (null)               kTfLiteInt32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  16 1024
+Tensor 267 (null)               kTfLiteInt32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 268 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent         64 bytes ( 0.0 MB)  16
+Tensor 269 (null)               kTfLiteInt8  kTfLiteArenaRw     147456 bytes ( 0.1 MB)  1 32 32 144
+Tensor 270 (null)               kTfLiteInt8  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 32 32 16
+Tensor 271 (null)               kTfLiteFloat32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 272 (null)               kTfLiteInt32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  16 1024
+Tensor 273 (null)               kTfLiteInt32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 274 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent         64 bytes ( 0.0 MB)  16
+Tensor 275 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 276 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 277 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       2048 bytes ( 0.0 MB)  16 32
+Tensor 278 (null)               kTfLiteInt8  kTfLiteArenaRw      36864 bytes ( 0.0 MB)  1 16 16 144
+Tensor 279 (null)               kTfLiteInt8  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 32 32 16
+Tensor 280 (null)               kTfLiteFloat32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 281 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 282 (null)               kTfLiteInt32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 283 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 284 (null)               kTfLiteInt8  kTfLiteArenaRw      73728 bytes ( 0.1 MB)  1 16 16 288
+Tensor 285 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 286 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 287 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 288 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 289 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 290 (null)               kTfLiteInt8  kTfLiteArenaRw      73728 bytes ( 0.1 MB)  1 16 16 288
+Tensor 291 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 292 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 293 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 294 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 295 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 296 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 297 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 298 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 299 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 300 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 301 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 302 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 303 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 304 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 305 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 306 (null)               kTfLiteInt8  kTfLiteArenaRw      73728 bytes ( 0.1 MB)  1 16 16 288
+Tensor 307 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 308 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 309 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 310 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 311 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 312 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 313 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 314 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 315 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 316 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 317 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 318 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 319 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 320 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 321 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 322 (null)               kTfLiteInt8  kTfLiteArenaRw      73728 bytes ( 0.1 MB)  1 16 16 288
+Tensor 323 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 324 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 325 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 326 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 327 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 328 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 329 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 330 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 331 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 332 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 333 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 334 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 335 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 336 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 337 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 338 (null)               kTfLiteInt8  kTfLiteArenaRw      73728 bytes ( 0.1 MB)  1 16 16 288
+Tensor 339 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 340 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 341 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 342 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 343 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 344 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 345 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 346 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 347 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 348 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 349 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 350 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 351 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 352 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 353 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 354 (null)               kTfLiteInt8  kTfLiteArenaRw      73728 bytes ( 0.1 MB)  1 16 16 288
+Tensor 355 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 356 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 357 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 358 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 359 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 360 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 361 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 362 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 363 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 364 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 365 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 366 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 367 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 368 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 369 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 370 (null)               kTfLiteInt8  kTfLiteArenaRw       2048 bytes ( 0.0 MB)  1 8 8 32
+Tensor 371 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 372 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 373 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 374 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 375 (null)               kTfLiteInt8  kTfLiteArenaRw      18432 bytes ( 0.0 MB)  1 8 8 288
+Tensor 376 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 377 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 378 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 379 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 380 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 381 (null)               kTfLiteInt8  kTfLiteArenaRw      36864 bytes ( 0.0 MB)  1 8 8 576
+Tensor 382 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 383 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 384 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 385 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 386 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 387 (null)               kTfLiteInt8  kTfLiteArenaRw      36864 bytes ( 0.0 MB)  1 8 8 576
+Tensor 388 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 389 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 390 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 391 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 392 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 393 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 394 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 395 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 396 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 397 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 398 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 399 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 400 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 401 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 402 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 403 (null)               kTfLiteInt8  kTfLiteArenaRw      36864 bytes ( 0.0 MB)  1 8 8 576
+Tensor 404 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 405 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 406 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 407 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 408 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 409 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 410 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 411 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 412 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 413 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 414 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 415 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 416 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 417 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 418 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 419 (null)               kTfLiteInt8  kTfLiteArenaRw      36864 bytes ( 0.0 MB)  1 8 8 576
+Tensor 420 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 421 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 422 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 423 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 424 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 425 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 426 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 427 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 428 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 429 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 430 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 431 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 432 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 433 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 434 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 435 (null)               kTfLiteInt8  kTfLiteArenaRw      36864 bytes ( 0.0 MB)  1 8 8 576
+Tensor 436 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 437 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 438 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 439 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 440 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 441 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 442 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 443 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 444 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 445 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 446 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 447 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 448 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 449 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 450 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 451 (null)               kTfLiteInt8  kTfLiteArenaRw      36864 bytes ( 0.0 MB)  1 8 8 576
+Tensor 452 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 453 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 454 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 455 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 456 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 457 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 458 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 459 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 460 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 461 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 462 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 463 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 464 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 465 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 466 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+
+Node   0 Operator Builtin Code   3 CONV_2D
+  Inputs: 0 19 18
+  Outputs: 60
+  Temporaries: 236
+Node   1 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 60
+  Outputs: 61
+Node   2 Operator Builtin Code  19 RELU
+  Inputs: 60
+  Outputs: 62
+Node   3 Operator Builtin Code  18 MUL
+  Inputs: 60 4
+  Outputs: 63
+Node   4 Operator Builtin Code   0 ADD
+  Inputs: 61 63
+  Outputs: 64
+Node   5 Operator Builtin Code  19 RELU
+  Inputs: 63
+  Outputs: 65
+Node   6 Operator Builtin Code   3 CONV_2D
+  Inputs: 62 20 18
+  Outputs: 66
+  Temporaries: 237 238 239 240 241 242
+Node   7 Operator Builtin Code   3 CONV_2D
+  Inputs: 65 15 18
+  Outputs: 67
+  Temporaries: 243
+Node   8 Operator Builtin Code   0 ADD
+  Inputs: 66 67
+  Outputs: 68
+Node   9 Operator Builtin Code   3 CONV_2D
+  Inputs: 64 14 18
+  Outputs: 69
+  Temporaries: 244
+Node  10 Operator Builtin Code   0 ADD
+  Inputs: 68 69
+  Outputs: 70
+Node  11 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 70
+  Outputs: 71
+Node  12 Operator Builtin Code  19 RELU
+  Inputs: 70
+  Outputs: 72
+Node  13 Operator Builtin Code  18 MUL
+  Inputs: 70 4
+  Outputs: 73
+Node  14 Operator Builtin Code   0 ADD
+  Inputs: 71 73
+  Outputs: 74
+Node  15 Operator Builtin Code  19 RELU
+  Inputs: 73
+  Outputs: 75
+Node  16 Operator Builtin Code   3 CONV_2D
+  Inputs: 72 21 18
+  Outputs: 76
+  Temporaries: 245 246 247 248 249 250
+Node  17 Operator Builtin Code   3 CONV_2D
+  Inputs: 75 13 18
+  Outputs: 77
+  Temporaries: 251
+Node  18 Operator Builtin Code   0 ADD
+  Inputs: 76 77
+  Outputs: 78
+Node  19 Operator Builtin Code   3 CONV_2D
+  Inputs: 74 12 18
+  Outputs: 79
+  Temporaries: 252
+Node  20 Operator Builtin Code   0 ADD
+  Inputs: 78 79
+  Outputs: 80
+Node  21 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 80
+  Outputs: 81
+Node  22 Operator Builtin Code  19 RELU
+  Inputs: 80
+  Outputs: 82
+Node  23 Operator Builtin Code  18 MUL
+  Inputs: 80 4
+  Outputs: 83
+Node  24 Operator Builtin Code   0 ADD
+  Inputs: 81 83
+  Outputs: 84
+Node  25 Operator Builtin Code  19 RELU
+  Inputs: 83
+  Outputs: 85
+Node  26 Operator Builtin Code   3 CONV_2D
+  Inputs: 82 22 18
+  Outputs: 86
+  Temporaries: 253 254 255 256 257 258
+Node  27 Operator Builtin Code   3 CONV_2D
+  Inputs: 85 11 18
+  Outputs: 87
+  Temporaries: 259
+Node  28 Operator Builtin Code   0 ADD
+  Inputs: 86 87
+  Outputs: 88
+Node  29 Operator Builtin Code   3 CONV_2D
+  Inputs: 84 10 18
+  Outputs: 89
+  Temporaries: 260
+Node  30 Operator Builtin Code   0 ADD
+  Inputs: 88 89
+  Outputs: 90
+Node  31 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 90
+  Outputs: 91
+Node  32 Operator Builtin Code  19 RELU
+  Inputs: 90
+  Outputs: 92
+Node  33 Operator Builtin Code  18 MUL
+  Inputs: 90 4
+  Outputs: 93
+Node  34 Operator Builtin Code   0 ADD
+  Inputs: 91 93
+  Outputs: 94
+Node  35 Operator Builtin Code   3 CONV_2D
+  Inputs: 94 9 18
+  Outputs: 95
+  Temporaries: 261
+Node  36 Operator Builtin Code  19 RELU
+  Inputs: 93
+  Outputs: 96
+Node  37 Operator Builtin Code   3 CONV_2D
+  Inputs: 96 8 18
+  Outputs: 97
+  Temporaries: 262
+Node  38 Operator Builtin Code   3 CONV_2D
+  Inputs: 92 23 18
+  Outputs: 98
+  Temporaries: 263 264 265 266 267 268
+Node  39 Operator Builtin Code   0 ADD
+  Inputs: 98 97
+  Outputs: 99
+Node  40 Operator Builtin Code   0 ADD
+  Inputs: 99 95
+  Outputs: 100
+Node  41 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 100
+  Outputs: 101
+Node  42 Operator Builtin Code  19 RELU
+  Inputs: 100
+  Outputs: 102
+Node  43 Operator Builtin Code   3 CONV_2D
+  Inputs: 102 24 18
+  Outputs: 103
+  Temporaries: 269 270 271 272 273 274
+Node  44 Operator Builtin Code  18 MUL
+  Inputs: 100 4
+  Outputs: 104
+Node  45 Operator Builtin Code   0 ADD
+  Inputs: 101 104
+  Outputs: 105
+Node  46 Operator Builtin Code   3 CONV_2D
+  Inputs: 105 7 18
+  Outputs: 106
+  Temporaries: 275
+Node  47 Operator Builtin Code  19 RELU
+  Inputs: 104
+  Outputs: 107
+Node  48 Operator Builtin Code   3 CONV_2D
+  Inputs: 107 6 18
+  Outputs: 108
+  Temporaries: 276
+Node  49 Operator Builtin Code   0 ADD
+  Inputs: 103 108
+  Outputs: 109
+Node  50 Operator Builtin Code   0 ADD
+  Inputs: 109 106
+  Outputs: 110
+Node  51 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 110
+  Outputs: 111
+Node  52 Operator Builtin Code   3 CONV_2D
+  Inputs: 111 5 16
+  Outputs: 112
+  Temporaries: 277
+Node  53 Operator Builtin Code  19 RELU
+  Inputs: 110
+  Outputs: 113
+Node  54 Operator Builtin Code   3 CONV_2D
+  Inputs: 113 25 16
+  Outputs: 114
+  Temporaries: 278 279 280 281 282 283
+Node  55 Operator Builtin Code   3 CONV_2D
+  Inputs: 114 26 16
+  Outputs: 115
+  Temporaries: 284 285 286 287 288 289
+Node  56 Operator Builtin Code   0 ADD
+  Inputs: 112 115
+  Outputs: 116
+Node  57 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 116
+  Outputs: 117
+Node  58 Operator Builtin Code  19 RELU
+  Inputs: 116
+  Outputs: 118
+Node  59 Operator Builtin Code   3 CONV_2D
+  Inputs: 118 27 16
+  Outputs: 119
+  Temporaries: 290 291 292 293 294 295
+Node  60 Operator Builtin Code  18 MUL
+  Inputs: 116 4
+  Outputs: 120
+Node  61 Operator Builtin Code   0 ADD
+  Inputs: 117 120
+  Outputs: 121
+Node  62 Operator Builtin Code   3 CONV_2D
+  Inputs: 121 28 16
+  Outputs: 122
+  Temporaries: 296 297 298 299 300
+Node  63 Operator Builtin Code  19 RELU
+  Inputs: 120
+  Outputs: 123
+Node  64 Operator Builtin Code   3 CONV_2D
+  Inputs: 123 29 16
+  Outputs: 124
+  Temporaries: 301 302 303 304 305
+Node  65 Operator Builtin Code   0 ADD
+  Inputs: 119 124
+  Outputs: 125
+Node  66 Operator Builtin Code   0 ADD
+  Inputs: 125 122
+  Outputs: 126
+Node  67 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 126
+  Outputs: 127
+Node  68 Operator Builtin Code  19 RELU
+  Inputs: 126
+  Outputs: 128
+Node  69 Operator Builtin Code   3 CONV_2D
+  Inputs: 128 30 16
+  Outputs: 129
+  Temporaries: 306 307 308 309 310 311
+Node  70 Operator Builtin Code  18 MUL
+  Inputs: 126 4
+  Outputs: 130
+Node  71 Operator Builtin Code   0 ADD
+  Inputs: 127 130
+  Outputs: 131
+Node  72 Operator Builtin Code   3 CONV_2D
+  Inputs: 131 31 16
+  Outputs: 132
+  Temporaries: 312 313 314 315 316
+Node  73 Operator Builtin Code  19 RELU
+  Inputs: 130
+  Outputs: 133
+Node  74 Operator Builtin Code   3 CONV_2D
+  Inputs: 133 32 16
+  Outputs: 134
+  Temporaries: 317 318 319 320 321
+Node  75 Operator Builtin Code   0 ADD
+  Inputs: 129 134
+  Outputs: 135
+Node  76 Operator Builtin Code   0 ADD
+  Inputs: 135 132
+  Outputs: 136
+Node  77 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 136
+  Outputs: 137
+Node  78 Operator Builtin Code  19 RELU
+  Inputs: 136
+  Outputs: 138
+Node  79 Operator Builtin Code   3 CONV_2D
+  Inputs: 138 33 16
+  Outputs: 139
+  Temporaries: 322 323 324 325 326 327
+Node  80 Operator Builtin Code  18 MUL
+  Inputs: 136 4
+  Outputs: 140
+Node  81 Operator Builtin Code   0 ADD
+  Inputs: 137 140
+  Outputs: 141
+Node  82 Operator Builtin Code   3 CONV_2D
+  Inputs: 141 34 16
+  Outputs: 142
+  Temporaries: 328 329 330 331 332
+Node  83 Operator Builtin Code  19 RELU
+  Inputs: 140
+  Outputs: 143
+Node  84 Operator Builtin Code   3 CONV_2D
+  Inputs: 143 35 16
+  Outputs: 144
+  Temporaries: 333 334 335 336 337
+Node  85 Operator Builtin Code   0 ADD
+  Inputs: 139 144
+  Outputs: 145
+Node  86 Operator Builtin Code   0 ADD
+  Inputs: 145 142
+  Outputs: 146
+Node  87 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 146
+  Outputs: 147
+Node  88 Operator Builtin Code  19 RELU
+  Inputs: 146
+  Outputs: 148
+Node  89 Operator Builtin Code   3 CONV_2D
+  Inputs: 148 36 16
+  Outputs: 149
+  Temporaries: 338 339 340 341 342 343
+Node  90 Operator Builtin Code  18 MUL
+  Inputs: 146 4
+  Outputs: 150
+Node  91 Operator Builtin Code   0 ADD
+  Inputs: 147 150
+  Outputs: 151
+Node  92 Operator Builtin Code   3 CONV_2D
+  Inputs: 151 37 16
+  Outputs: 152
+  Temporaries: 344 345 346 347 348
+Node  93 Operator Builtin Code  19 RELU
+  Inputs: 150
+  Outputs: 153
+Node  94 Operator Builtin Code   3 CONV_2D
+  Inputs: 153 38 16
+  Outputs: 154
+  Temporaries: 349 350 351 352 353
+Node  95 Operator Builtin Code   0 ADD
+  Inputs: 149 154
+  Outputs: 155
+Node  96 Operator Builtin Code   0 ADD
+  Inputs: 155 152
+  Outputs: 156
+Node  97 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 156
+  Outputs: 157
+Node  98 Operator Builtin Code  19 RELU
+  Inputs: 156
+  Outputs: 158
+Node  99 Operator Builtin Code   3 CONV_2D
+  Inputs: 158 39 16
+  Outputs: 159
+  Temporaries: 354 355 356 357 358 359
+Node 100 Operator Builtin Code  18 MUL
+  Inputs: 156 4
+  Outputs: 160
+Node 101 Operator Builtin Code   0 ADD
+  Inputs: 157 160
+  Outputs: 161
+Node 102 Operator Builtin Code   3 CONV_2D
+  Inputs: 161 40 16
+  Outputs: 162
+  Temporaries: 360 361 362 363 364
+Node 103 Operator Builtin Code  19 RELU
+  Inputs: 160
+  Outputs: 163
+Node 104 Operator Builtin Code   3 CONV_2D
+  Inputs: 163 41 16
+  Outputs: 164
+  Temporaries: 365 366 367 368 369
+Node 105 Operator Builtin Code   0 ADD
+  Inputs: 159 164
+  Outputs: 165
+Node 106 Operator Builtin Code   0 ADD
+  Inputs: 165 162
+  Outputs: 166
+Node 107 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 166
+  Outputs: 167
+Node 108 Operator Builtin Code   3 CONV_2D
+  Inputs: 167 42 17
+  Outputs: 168
+  Temporaries: 370 371 372 373 374
+Node 109 Operator Builtin Code  19 RELU
+  Inputs: 166
+  Outputs: 169
+Node 110 Operator Builtin Code   3 CONV_2D
+  Inputs: 169 43 17
+  Outputs: 170
+  Temporaries: 375 376 377 378 379 380
+Node 111 Operator Builtin Code   3 CONV_2D
+  Inputs: 170 44 17
+  Outputs: 171
+  Temporaries: 381 382 383 384 385 386
+Node 112 Operator Builtin Code   0 ADD
+  Inputs: 168 171
+  Outputs: 172
+Node 113 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 172
+  Outputs: 173
+Node 114 Operator Builtin Code  19 RELU
+  Inputs: 172
+  Outputs: 174
+Node 115 Operator Builtin Code   3 CONV_2D
+  Inputs: 174 45 17
+  Outputs: 175
+  Temporaries: 387 388 389 390 391 392
+Node 116 Operator Builtin Code  18 MUL
+  Inputs: 172 4
+  Outputs: 176
+Node 117 Operator Builtin Code   0 ADD
+  Inputs: 173 176
+  Outputs: 177
+Node 118 Operator Builtin Code   3 CONV_2D
+  Inputs: 177 46 17
+  Outputs: 178
+  Temporaries: 393 394 395 396 397
+Node 119 Operator Builtin Code  19 RELU
+  Inputs: 176
+  Outputs: 179
+Node 120 Operator Builtin Code   3 CONV_2D
+  Inputs: 179 47 17
+  Outputs: 180
+  Temporaries: 398 399 400 401 402
+Node 121 Operator Builtin Code   0 ADD
+  Inputs: 175 180
+  Outputs: 181
+Node 122 Operator Builtin Code   0 ADD
+  Inputs: 181 178
+  Outputs: 182
+Node 123 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 182
+  Outputs: 183
+Node 124 Operator Builtin Code  19 RELU
+  Inputs: 182
+  Outputs: 184
+Node 125 Operator Builtin Code   3 CONV_2D
+  Inputs: 184 48 17
+  Outputs: 185
+  Temporaries: 403 404 405 406 407 408
+Node 126 Operator Builtin Code  18 MUL
+  Inputs: 182 4
+  Outputs: 186
+Node 127 Operator Builtin Code   0 ADD
+  Inputs: 183 186
+  Outputs: 187
+Node 128 Operator Builtin Code   3 CONV_2D
+  Inputs: 187 49 17
+  Outputs: 188
+  Temporaries: 409 410 411 412 413
+Node 129 Operator Builtin Code  19 RELU
+  Inputs: 186
+  Outputs: 189
+Node 130 Operator Builtin Code   3 CONV_2D
+  Inputs: 189 50 17
+  Outputs: 190
+  Temporaries: 414 415 416 417 418
+Node 131 Operator Builtin Code   0 ADD
+  Inputs: 185 190
+  Outputs: 191
+Node 132 Operator Builtin Code   0 ADD
+  Inputs: 191 188
+  Outputs: 192
+Node 133 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 192
+  Outputs: 193
+Node 134 Operator Builtin Code  19 RELU
+  Inputs: 192
+  Outputs: 194
+Node 135 Operator Builtin Code   3 CONV_2D
+  Inputs: 194 51 17
+  Outputs: 195
+  Temporaries: 419 420 421 422 423 424
+Node 136 Operator Builtin Code  18 MUL
+  Inputs: 192 4
+  Outputs: 196
+Node 137 Operator Builtin Code   0 ADD
+  Inputs: 193 196
+  Outputs: 197
+Node 138 Operator Builtin Code   3 CONV_2D
+  Inputs: 197 52 17
+  Outputs: 198
+  Temporaries: 425 426 427 428 429
+Node 139 Operator Builtin Code  19 RELU
+  Inputs: 196
+  Outputs: 199
+Node 140 Operator Builtin Code   3 CONV_2D
+  Inputs: 199 53 17
+  Outputs: 200
+  Temporaries: 430 431 432 433 434
+Node 141 Operator Builtin Code   0 ADD
+  Inputs: 195 200
+  Outputs: 201
+Node 142 Operator Builtin Code   0 ADD
+  Inputs: 201 198
+  Outputs: 202
+Node 143 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 202
+  Outputs: 203
+Node 144 Operator Builtin Code  19 RELU
+  Inputs: 202
+  Outputs: 204
+Node 145 Operator Builtin Code   3 CONV_2D
+  Inputs: 204 54 17
+  Outputs: 205
+  Temporaries: 435 436 437 438 439 440
+Node 146 Operator Builtin Code  18 MUL
+  Inputs: 202 4
+  Outputs: 206
+Node 147 Operator Builtin Code   0 ADD
+  Inputs: 203 206
+  Outputs: 207
+Node 148 Operator Builtin Code   3 CONV_2D
+  Inputs: 207 55 17
+  Outputs: 208
+  Temporaries: 441 442 443 444 445
+Node 149 Operator Builtin Code  19 RELU
+  Inputs: 206
+  Outputs: 209
+Node 150 Operator Builtin Code   3 CONV_2D
+  Inputs: 209 56 17
+  Outputs: 210
+  Temporaries: 446 447 448 449 450
+Node 151 Operator Builtin Code   0 ADD
+  Inputs: 205 210
+  Outputs: 211
+Node 152 Operator Builtin Code   0 ADD
+  Inputs: 211 208
+  Outputs: 212
+Node 153 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 212
+  Outputs: 213
+Node 154 Operator Builtin Code  19 RELU
+  Inputs: 212
+  Outputs: 214
+Node 155 Operator Builtin Code   3 CONV_2D
+  Inputs: 214 57 17
+  Outputs: 215
+  Temporaries: 451 452 453 454 455 456
+Node 156 Operator Builtin Code  18 MUL
+  Inputs: 212 4
+  Outputs: 216
+Node 157 Operator Builtin Code   0 ADD
+  Inputs: 213 216
+  Outputs: 217
+Node 158 Operator Builtin Code   3 CONV_2D
+  Inputs: 217 58 17
+  Outputs: 218
+  Temporaries: 457 458 459 460 461
+Node 159 Operator Builtin Code  19 RELU
+  Inputs: 216
+  Outputs: 219
+Node 160 Operator Builtin Code   3 CONV_2D
+  Inputs: 219 59 17
+  Outputs: 220
+  Temporaries: 462 463 464 465 466
+Node 161 Operator Builtin Code   0 ADD
+  Inputs: 215 220
+  Outputs: 221
+Node 162 Operator Builtin Code   0 ADD
+  Inputs: 221 218
+  Outputs: 222
+Node 163 Operator Builtin Code  18 MUL
+  Inputs: 222 2
+  Outputs: 223
+Node 164 Operator Builtin Code   0 ADD
+  Inputs: 223 17
+  Outputs: 224
+Node 165 Operator Builtin Code  40 MEAN
+  Inputs: 224 3
+  Outputs: 225
+  Temporaries: 228 229 230
+Node 166 Operator Builtin Code   9 FULLY_CONNECTED
+  Inputs: 225 1 -1
+  Outputs: 226
+Node 167 Operator Builtin Code  25 SOFTMAX
+  Inputs: 226
+  Outputs: 227
+
+
+=== Post-invoke Interpreter State ===
+Interpreter has 467 tensors and 168 nodes
+Inputs: 0
+Outputs: 227
+
+Tensor   0 serving_default_input_3:0 kTfLiteFloat32  kTfLiteArenaRw      12288 bytes ( 0.0 MB)  1 32 32 3
+Tensor   1 model_2/dense_2/MatMul kTfLiteFloat32   kTfLiteMmapRo       2560 bytes ( 0.0 MB)  10 64
+Tensor   2 model_2/batch_normalization_137/FusedBatchNormV3 kTfLiteFloat32   kTfLiteMmapRo        256 bytes ( 0.0 MB)  64
+Tensor   3 model_2/global_average_pooling2d_2/Mean/reduction_indices kTfLiteInt32   kTfLiteMmapRo          8 bytes ( 0.0 MB)  2
+Tensor   4 Const                kTfLiteFloat32   kTfLiteMmapRo          4 bytes ( 0.0 MB) 
+Tensor   5 model_2/conv2d_107/Conv2D kTfLiteFloat32   kTfLiteMmapRo       2048 bytes ( 0.0 MB)  32 1 1 16
+Tensor   6 model_2/conv2d_103/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor   7 model_2/conv2d_104/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor   8 model_2/conv2d_100/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor   9 model_2/conv2d_101/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor  10 model_2/conv2d_98/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor  11 model_2/conv2d_97/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor  12 model_2/conv2d_95/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor  13 model_2/conv2d_94/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor  14 model_2/conv2d_92/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor  15 model_2/conv2d_91/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  16 1 1 16
+Tensor  16 model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp kTfLiteFloat32   kTfLiteMmapRo        128 bytes ( 0.0 MB)  32
+Tensor  17 model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp kTfLiteFloat32   kTfLiteMmapRo        256 bytes ( 0.0 MB)  64
+Tensor  18 model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp kTfLiteFloat32   kTfLiteMmapRo         64 bytes ( 0.0 MB)  16
+Tensor  19 model_2/conv2d_89/Conv2D kTfLiteFloat32   kTfLiteMmapRo       1728 bytes ( 0.0 MB)  16 3 3 3
+Tensor  20 model_2/conv2d_90/Conv2D kTfLiteInt8   kTfLiteMmapRo       2304 bytes ( 0.0 MB)  16 3 3 16
+Tensor  21 model_2/conv2d_93/Conv2D kTfLiteInt8   kTfLiteMmapRo       2304 bytes ( 0.0 MB)  16 3 3 16
+Tensor  22 model_2/conv2d_96/Conv2D kTfLiteInt8   kTfLiteMmapRo       2304 bytes ( 0.0 MB)  16 3 3 16
+Tensor  23 model_2/conv2d_99/Conv2D kTfLiteInt8   kTfLiteMmapRo       2304 bytes ( 0.0 MB)  16 3 3 16
+Tensor  24 model_2/conv2d_102/Conv2D kTfLiteInt8   kTfLiteMmapRo       2304 bytes ( 0.0 MB)  16 3 3 16
+Tensor  25 model_2/conv2d_105/Conv2D kTfLiteInt8   kTfLiteMmapRo       4608 bytes ( 0.0 MB)  32 3 3 16
+Tensor  26 model_2/conv2d_106/Conv2D kTfLiteInt8   kTfLiteMmapRo       9216 bytes ( 0.0 MB)  32 3 3 32
+Tensor  27 model_2/conv2d_108/Conv2D kTfLiteInt8   kTfLiteMmapRo       9216 bytes ( 0.0 MB)  32 3 3 32
+Tensor  28 model_2/conv2d_110/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  29 model_2/conv2d_109/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  30 model_2/conv2d_111/Conv2D kTfLiteInt8   kTfLiteMmapRo       9216 bytes ( 0.0 MB)  32 3 3 32
+Tensor  31 model_2/conv2d_113/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  32 model_2/conv2d_112/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  33 model_2/conv2d_114/Conv2D kTfLiteInt8   kTfLiteMmapRo       9216 bytes ( 0.0 MB)  32 3 3 32
+Tensor  34 model_2/conv2d_116/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  35 model_2/conv2d_115/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  36 model_2/conv2d_117/Conv2D kTfLiteInt8   kTfLiteMmapRo       9216 bytes ( 0.0 MB)  32 3 3 32
+Tensor  37 model_2/conv2d_119/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  38 model_2/conv2d_118/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  39 model_2/conv2d_120/Conv2D kTfLiteInt8   kTfLiteMmapRo       9216 bytes ( 0.0 MB)  32 3 3 32
+Tensor  40 model_2/conv2d_122/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  41 model_2/conv2d_121/Conv2D kTfLiteInt8   kTfLiteMmapRo       1024 bytes ( 0.0 MB)  32 1 1 32
+Tensor  42 model_2/conv2d_125/Conv2D kTfLiteInt8   kTfLiteMmapRo       2048 bytes ( 0.0 MB)  64 1 1 32
+Tensor  43 model_2/conv2d_123/Conv2D kTfLiteInt8   kTfLiteMmapRo      18432 bytes ( 0.0 MB)  64 3 3 32
+Tensor  44 model_2/conv2d_124/Conv2D kTfLiteInt8   kTfLiteMmapRo      36864 bytes ( 0.0 MB)  64 3 3 64
+Tensor  45 model_2/conv2d_126/Conv2D kTfLiteInt8   kTfLiteMmapRo      36864 bytes ( 0.0 MB)  64 3 3 64
+Tensor  46 model_2/conv2d_128/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  47 model_2/conv2d_127/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  48 model_2/conv2d_129/Conv2D kTfLiteInt8   kTfLiteMmapRo      36864 bytes ( 0.0 MB)  64 3 3 64
+Tensor  49 model_2/conv2d_131/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  50 model_2/conv2d_130/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  51 model_2/conv2d_132/Conv2D kTfLiteInt8   kTfLiteMmapRo      36864 bytes ( 0.0 MB)  64 3 3 64
+Tensor  52 model_2/conv2d_134/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  53 model_2/conv2d_133/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  54 model_2/conv2d_135/Conv2D kTfLiteInt8   kTfLiteMmapRo      36864 bytes ( 0.0 MB)  64 3 3 64
+Tensor  55 model_2/conv2d_137/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  56 model_2/conv2d_136/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  57 model_2/conv2d_138/Conv2D kTfLiteInt8   kTfLiteMmapRo      36864 bytes ( 0.0 MB)  64 3 3 64
+Tensor  58 model_2/conv2d_140/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  59 model_2/conv2d_139/Conv2D kTfLiteInt8   kTfLiteMmapRo       4096 bytes ( 0.0 MB)  64 1 1 64
+Tensor  60 model_2/batch_normalization_87/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_89/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  61 model_2/average_pooling2d_34/AvgPool kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  62 model_2/re_lu_85/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  63 model_2/tf.math.multiply_30/Mul kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  64 model_2/re_lu_87/Relu;model_2/add_60/add kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  65 model_2/re_lu_86/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  66 model_2/batch_normalization_88/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_90/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  67 model_2/batch_normalization_89/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_91/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  68 model_2/add_61/add   kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  69 model_2/batch_normalization_90/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_92/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  70 model_2/add_61/add_1 kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  71 model_2/average_pooling2d_35/AvgPool kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  72 model_2/re_lu_88/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  73 model_2/tf.math.multiply_31/Mul kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  74 model_2/re_lu_90/Relu;model_2/add_62/add kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  75 model_2/re_lu_89/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  76 model_2/batch_normalization_91/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_93/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  77 model_2/batch_normalization_92/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_94/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  78 model_2/add_63/add   kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  79 model_2/batch_normalization_93/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_95/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  80 model_2/add_63/add_1 kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  81 model_2/average_pooling2d_36/AvgPool kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  82 model_2/re_lu_91/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  83 model_2/tf.math.multiply_32/Mul kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  84 model_2/re_lu_93/Relu;model_2/add_64/add kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  85 model_2/re_lu_92/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  86 model_2/batch_normalization_94/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_96/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  87 model_2/batch_normalization_95/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_97/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  88 model_2/add_65/add   kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  89 model_2/batch_normalization_96/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_98/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  90 model_2/add_65/add_1 kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  91 model_2/average_pooling2d_37/AvgPool kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  92 model_2/re_lu_94/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  93 model_2/tf.math.multiply_33/Mul kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  94 model_2/re_lu_96/Relu;model_2/add_66/add kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  95 model_2/batch_normalization_99/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_101/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  96 model_2/re_lu_95/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  97 model_2/batch_normalization_98/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_100/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  98 model_2/batch_normalization_97/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_99/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor  99 model_2/add_67/add   kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 100 model_2/add_67/add_1 kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 101 model_2/average_pooling2d_38/AvgPool kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 102 model_2/re_lu_97/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 103 model_2/batch_normalization_100/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_102/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 104 model_2/tf.math.multiply_34/Mul kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 105 model_2/re_lu_99/Relu;model_2/add_68/add kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 106 model_2/batch_normalization_102/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_104/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 107 model_2/re_lu_98/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 108 model_2/batch_normalization_101/FusedBatchNormV3;model_2/batch_normalization_100/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_103/Conv2D kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 109 model_2/add_69/add   kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 110 model_2/add_69/add_1 kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 111 model_2/average_pooling2d_39/AvgPool kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 16 16 16
+Tensor 112 model_2/conv2d_107/Conv2D1 kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 113 model_2/re_lu_100/Relu kTfLiteFloat32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  1 32 32 16
+Tensor 114 model_2/re_lu_101/Relu;model_2/batch_normalization_103/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_105/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 115 model_2/batch_normalization_104/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_106/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 116 model_2/tf.__operators__.add_4/AddV2 kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 117 model_2/average_pooling2d_40/AvgPool kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 118 model_2/re_lu_102/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 119 model_2/batch_normalization_105/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_108/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 120 model_2/tf.math.multiply_35/Mul kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 121 model_2/re_lu_104/Relu;model_2/add_70/add kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 122 model_2/batch_normalization_107/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_110/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 123 model_2/re_lu_103/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 124 model_2/batch_normalization_106/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_109/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 125 model_2/add_71/add   kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 126 model_2/add_71/add_1 kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 127 model_2/average_pooling2d_41/AvgPool kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 128 model_2/re_lu_105/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 129 model_2/batch_normalization_108/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_111/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 130 model_2/tf.math.multiply_36/Mul kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 131 model_2/re_lu_107/Relu;model_2/add_72/add kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 132 model_2/batch_normalization_110/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_113/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 133 model_2/re_lu_106/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 134 model_2/batch_normalization_109/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_112/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 135 model_2/add_73/add   kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 136 model_2/add_73/add_1 kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 137 model_2/average_pooling2d_42/AvgPool kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 138 model_2/re_lu_108/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 139 model_2/batch_normalization_111/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_114/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 140 model_2/tf.math.multiply_37/Mul kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 141 model_2/re_lu_110/Relu;model_2/add_74/add kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 142 model_2/batch_normalization_113/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_116/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 143 model_2/re_lu_109/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 144 model_2/batch_normalization_112/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_115/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 145 model_2/add_75/add   kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 146 model_2/add_75/add_1 kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 147 model_2/average_pooling2d_43/AvgPool kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 148 model_2/re_lu_111/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 149 model_2/batch_normalization_114/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_117/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 150 model_2/tf.math.multiply_38/Mul kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 151 model_2/re_lu_113/Relu;model_2/add_76/add kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 152 model_2/batch_normalization_116/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_119/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 153 model_2/re_lu_112/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 154 model_2/batch_normalization_115/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_118/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 155 model_2/add_77/add   kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 156 model_2/add_77/add_1 kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 157 model_2/average_pooling2d_44/AvgPool kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 158 model_2/re_lu_114/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 159 model_2/batch_normalization_117/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_120/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 160 model_2/tf.math.multiply_39/Mul kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 161 model_2/re_lu_116/Relu;model_2/add_78/add kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 162 model_2/batch_normalization_119/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_122/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 163 model_2/re_lu_115/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 164 model_2/batch_normalization_118/FusedBatchNormV3;model_2/batch_normalization_103/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_121/Conv2D kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 165 model_2/add_79/add   kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 166 model_2/add_79/add_1 kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 167 model_2/average_pooling2d_45/AvgPool kTfLiteFloat32  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 8 8 32
+Tensor 168 model_2/conv2d_125/Conv2D1 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 169 model_2/re_lu_117/Relu kTfLiteFloat32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  1 16 16 32
+Tensor 170 model_2/re_lu_118/Relu;model_2/batch_normalization_120/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_123/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 171 model_2/batch_normalization_121/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_124/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 172 model_2/tf.__operators__.add_5/AddV2 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 173 model_2/average_pooling2d_46/AvgPool kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 174 model_2/re_lu_119/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 175 model_2/batch_normalization_122/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_126/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 176 model_2/tf.math.multiply_40/Mul kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 177 model_2/re_lu_121/Relu;model_2/add_80/add kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 178 model_2/batch_normalization_124/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_128/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 179 model_2/re_lu_120/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 180 model_2/batch_normalization_123/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_127/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 181 model_2/add_81/add   kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 182 model_2/add_81/add_1 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 183 model_2/average_pooling2d_47/AvgPool kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 184 model_2/re_lu_122/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 185 model_2/batch_normalization_125/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_129/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 186 model_2/tf.math.multiply_41/Mul kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 187 model_2/re_lu_124/Relu;model_2/add_82/add kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 188 model_2/batch_normalization_127/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_131/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 189 model_2/re_lu_123/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 190 model_2/batch_normalization_126/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_130/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 191 model_2/add_83/add   kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 192 model_2/add_83/add_1 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 193 model_2/average_pooling2d_48/AvgPool kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 194 model_2/re_lu_125/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 195 model_2/batch_normalization_128/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_132/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 196 model_2/tf.math.multiply_42/Mul kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 197 model_2/re_lu_127/Relu;model_2/add_84/add kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 198 model_2/batch_normalization_130/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_134/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 199 model_2/re_lu_126/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 200 model_2/batch_normalization_129/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_133/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 201 model_2/add_85/add   kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 202 model_2/add_85/add_1 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 203 model_2/average_pooling2d_49/AvgPool kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 204 model_2/re_lu_128/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 205 model_2/batch_normalization_131/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_135/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 206 model_2/tf.math.multiply_43/Mul kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 207 model_2/re_lu_130/Relu;model_2/add_86/add kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 208 model_2/batch_normalization_133/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_137/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 209 model_2/re_lu_129/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 210 model_2/batch_normalization_132/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_136/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 211 model_2/add_87/add   kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 212 model_2/add_87/add_1 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 213 model_2/average_pooling2d_50/AvgPool kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 214 model_2/re_lu_131/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 215 model_2/batch_normalization_134/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_138/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 216 model_2/tf.math.multiply_44/Mul kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 217 model_2/re_lu_133/Relu;model_2/add_88/add kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 218 model_2/batch_normalization_136/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_140/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 219 model_2/re_lu_132/Relu kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 220 model_2/batch_normalization_135/FusedBatchNormV3;model_2/batch_normalization_120/FusedBatchNormV3/ReadVariableOp;model_2/conv2d_139/Conv2D kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 221 model_2/add_89/add   kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 222 model_2/add_89/add_1 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 223 model_2/batch_normalization_137/FusedBatchNormV31 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 224 model_2/re_lu_134/Relu;model_2/batch_normalization_137/FusedBatchNormV3 kTfLiteFloat32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 8 8 64
+Tensor 225 model_2/global_average_pooling2d_2/Mean kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  1 64
+Tensor 226 model_2/dense_2/MatMul;model_2/dense_2/BiasAdd kTfLiteFloat32  kTfLiteArenaRw         40 bytes ( 0.0 MB)  1 10
+Tensor 227 StatefulPartitionedCall:0 kTfLiteFloat32  kTfLiteArenaRw         40 bytes ( 0.0 MB)  1 10
+Tensor 228 (null)               kTfLiteInt32  kTfLiteArenaRw         16 bytes ( 0.0 MB)  4
+Tensor 229 (null)               kTfLiteInt32  kTfLiteArenaRw          8 bytes ( 0.0 MB)  2
+Tensor 230 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 231 (null)               kTfLiteNoType  kTfLiteMemNone          0 bytes ( 0.0 MB)  (null)
+Tensor 232 (null)               kTfLiteNoType  kTfLiteMemNone          0 bytes ( 0.0 MB)  (null)
+Tensor 233 (null)               kTfLiteNoType  kTfLiteMemNone          0 bytes ( 0.0 MB)  (null)
+Tensor 234 (null)               kTfLiteNoType  kTfLiteMemNone          0 bytes ( 0.0 MB)  (null)
+Tensor 235 (null)               kTfLiteNoType  kTfLiteMemNone          0 bytes ( 0.0 MB)  (null)
+Tensor 236 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1728 bytes ( 0.0 MB)  27 16
+Tensor 237 (null)               kTfLiteInt8  kTfLiteArenaRw     147456 bytes ( 0.1 MB)  1 32 32 144
+Tensor 238 (null)               kTfLiteInt8  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 32 32 16
+Tensor 239 (null)               kTfLiteFloat32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 240 (null)               kTfLiteInt32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  16 1024
+Tensor 241 (null)               kTfLiteInt32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 242 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent         64 bytes ( 0.0 MB)  16
+Tensor 243 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 244 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 245 (null)               kTfLiteInt8  kTfLiteArenaRw     147456 bytes ( 0.1 MB)  1 32 32 144
+Tensor 246 (null)               kTfLiteInt8  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 32 32 16
+Tensor 247 (null)               kTfLiteFloat32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 248 (null)               kTfLiteInt32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  16 1024
+Tensor 249 (null)               kTfLiteInt32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 250 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent         64 bytes ( 0.0 MB)  16
+Tensor 251 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 252 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 253 (null)               kTfLiteInt8  kTfLiteArenaRw     147456 bytes ( 0.1 MB)  1 32 32 144
+Tensor 254 (null)               kTfLiteInt8  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 32 32 16
+Tensor 255 (null)               kTfLiteFloat32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 256 (null)               kTfLiteInt32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  16 1024
+Tensor 257 (null)               kTfLiteInt32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 258 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent         64 bytes ( 0.0 MB)  16
+Tensor 259 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 260 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 261 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 262 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 263 (null)               kTfLiteInt8  kTfLiteArenaRw     147456 bytes ( 0.1 MB)  1 32 32 144
+Tensor 264 (null)               kTfLiteInt8  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 32 32 16
+Tensor 265 (null)               kTfLiteFloat32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 266 (null)               kTfLiteInt32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  16 1024
+Tensor 267 (null)               kTfLiteInt32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 268 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent         64 bytes ( 0.0 MB)  16
+Tensor 269 (null)               kTfLiteInt8  kTfLiteArenaRw     147456 bytes ( 0.1 MB)  1 32 32 144
+Tensor 270 (null)               kTfLiteInt8  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 32 32 16
+Tensor 271 (null)               kTfLiteFloat32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 272 (null)               kTfLiteInt32  kTfLiteArenaRw      65536 bytes ( 0.1 MB)  16 1024
+Tensor 273 (null)               kTfLiteInt32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 274 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent         64 bytes ( 0.0 MB)  16
+Tensor 275 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 276 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       1024 bytes ( 0.0 MB)  16 16
+Tensor 277 (null)               kTfLiteFloat32 kTfLiteArenaRwPersistent       2048 bytes ( 0.0 MB)  16 32
+Tensor 278 (null)               kTfLiteInt8  kTfLiteArenaRw      36864 bytes ( 0.0 MB)  1 16 16 144
+Tensor 279 (null)               kTfLiteInt8  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  1 32 32 16
+Tensor 280 (null)               kTfLiteFloat32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 281 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 282 (null)               kTfLiteInt32  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1024
+Tensor 283 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 284 (null)               kTfLiteInt8  kTfLiteArenaRw      73728 bytes ( 0.1 MB)  1 16 16 288
+Tensor 285 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 286 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 287 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 288 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 289 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 290 (null)               kTfLiteInt8  kTfLiteArenaRw      73728 bytes ( 0.1 MB)  1 16 16 288
+Tensor 291 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 292 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 293 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 294 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 295 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 296 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 297 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 298 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 299 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 300 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 301 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 302 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 303 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 304 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 305 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 306 (null)               kTfLiteInt8  kTfLiteArenaRw      73728 bytes ( 0.1 MB)  1 16 16 288
+Tensor 307 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 308 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 309 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 310 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 311 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 312 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 313 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 314 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 315 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 316 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 317 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 318 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 319 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 320 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 321 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 322 (null)               kTfLiteInt8  kTfLiteArenaRw      73728 bytes ( 0.1 MB)  1 16 16 288
+Tensor 323 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 324 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 325 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 326 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 327 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 328 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 329 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 330 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 331 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 332 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 333 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 334 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 335 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 336 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 337 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 338 (null)               kTfLiteInt8  kTfLiteArenaRw      73728 bytes ( 0.1 MB)  1 16 16 288
+Tensor 339 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 340 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 341 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 342 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 343 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 344 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 345 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 346 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 347 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 348 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 349 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 350 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 351 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 352 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 353 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 354 (null)               kTfLiteInt8  kTfLiteArenaRw      73728 bytes ( 0.1 MB)  1 16 16 288
+Tensor 355 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 356 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 357 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 358 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 359 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 360 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 361 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 362 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 363 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 364 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 365 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 366 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 367 (null)               kTfLiteInt32  kTfLiteArenaRw      32768 bytes ( 0.0 MB)  32 256
+Tensor 368 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 369 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        128 bytes ( 0.0 MB)  32
+Tensor 370 (null)               kTfLiteInt8  kTfLiteArenaRw       2048 bytes ( 0.0 MB)  1 8 8 32
+Tensor 371 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 372 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 373 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 374 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 375 (null)               kTfLiteInt8  kTfLiteArenaRw      18432 bytes ( 0.0 MB)  1 8 8 288
+Tensor 376 (null)               kTfLiteInt8  kTfLiteArenaRw       8192 bytes ( 0.0 MB)  1 16 16 32
+Tensor 377 (null)               kTfLiteFloat32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 378 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 379 (null)               kTfLiteInt32  kTfLiteArenaRw       1024 bytes ( 0.0 MB)  256
+Tensor 380 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 381 (null)               kTfLiteInt8  kTfLiteArenaRw      36864 bytes ( 0.0 MB)  1 8 8 576
+Tensor 382 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 383 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 384 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 385 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 386 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 387 (null)               kTfLiteInt8  kTfLiteArenaRw      36864 bytes ( 0.0 MB)  1 8 8 576
+Tensor 388 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 389 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 390 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 391 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 392 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 393 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 394 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 395 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 396 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 397 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 398 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 399 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 400 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 401 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 402 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 403 (null)               kTfLiteInt8  kTfLiteArenaRw      36864 bytes ( 0.0 MB)  1 8 8 576
+Tensor 404 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 405 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 406 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 407 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 408 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 409 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 410 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 411 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 412 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 413 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 414 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 415 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 416 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 417 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 418 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 419 (null)               kTfLiteInt8  kTfLiteArenaRw      36864 bytes ( 0.0 MB)  1 8 8 576
+Tensor 420 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 421 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 422 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 423 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 424 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 425 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 426 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 427 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 428 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 429 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 430 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 431 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 432 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 433 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 434 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 435 (null)               kTfLiteInt8  kTfLiteArenaRw      36864 bytes ( 0.0 MB)  1 8 8 576
+Tensor 436 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 437 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 438 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 439 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 440 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 441 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 442 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 443 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 444 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 445 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 446 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 447 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 448 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 449 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 450 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 451 (null)               kTfLiteInt8  kTfLiteArenaRw      36864 bytes ( 0.0 MB)  1 8 8 576
+Tensor 452 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 453 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 454 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 455 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 456 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 457 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 458 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 459 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 460 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 461 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+Tensor 462 (null)               kTfLiteInt8  kTfLiteArenaRw       4096 bytes ( 0.0 MB)  1 8 8 64
+Tensor 463 (null)               kTfLiteFloat32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 464 (null)               kTfLiteInt32  kTfLiteArenaRw      16384 bytes ( 0.0 MB)  64 64
+Tensor 465 (null)               kTfLiteInt32  kTfLiteArenaRw        256 bytes ( 0.0 MB)  64
+Tensor 466 (null)               kTfLiteInt32 kTfLiteArenaRwPersistent        256 bytes ( 0.0 MB)  64
+
+Node   0 Operator Builtin Code   3 CONV_2D
+  Inputs: 0 19 18
+  Outputs: 60
+  Temporaries: 236
+Node   1 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 60
+  Outputs: 61
+Node   2 Operator Builtin Code  19 RELU
+  Inputs: 60
+  Outputs: 62
+Node   3 Operator Builtin Code  18 MUL
+  Inputs: 60 4
+  Outputs: 63
+Node   4 Operator Builtin Code   0 ADD
+  Inputs: 61 63
+  Outputs: 64
+Node   5 Operator Builtin Code  19 RELU
+  Inputs: 63
+  Outputs: 65
+Node   6 Operator Builtin Code   3 CONV_2D
+  Inputs: 62 20 18
+  Outputs: 66
+  Temporaries: 237 238 239 240 241 242
+Node   7 Operator Builtin Code   3 CONV_2D
+  Inputs: 65 15 18
+  Outputs: 67
+  Temporaries: 243
+Node   8 Operator Builtin Code   0 ADD
+  Inputs: 66 67
+  Outputs: 68
+Node   9 Operator Builtin Code   3 CONV_2D
+  Inputs: 64 14 18
+  Outputs: 69
+  Temporaries: 244
+Node  10 Operator Builtin Code   0 ADD
+  Inputs: 68 69
+  Outputs: 70
+Node  11 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 70
+  Outputs: 71
+Node  12 Operator Builtin Code  19 RELU
+  Inputs: 70
+  Outputs: 72
+Node  13 Operator Builtin Code  18 MUL
+  Inputs: 70 4
+  Outputs: 73
+Node  14 Operator Builtin Code   0 ADD
+  Inputs: 71 73
+  Outputs: 74
+Node  15 Operator Builtin Code  19 RELU
+  Inputs: 73
+  Outputs: 75
+Node  16 Operator Builtin Code   3 CONV_2D
+  Inputs: 72 21 18
+  Outputs: 76
+  Temporaries: 245 246 247 248 249 250
+Node  17 Operator Builtin Code   3 CONV_2D
+  Inputs: 75 13 18
+  Outputs: 77
+  Temporaries: 251
+Node  18 Operator Builtin Code   0 ADD
+  Inputs: 76 77
+  Outputs: 78
+Node  19 Operator Builtin Code   3 CONV_2D
+  Inputs: 74 12 18
+  Outputs: 79
+  Temporaries: 252
+Node  20 Operator Builtin Code   0 ADD
+  Inputs: 78 79
+  Outputs: 80
+Node  21 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 80
+  Outputs: 81
+Node  22 Operator Builtin Code  19 RELU
+  Inputs: 80
+  Outputs: 82
+Node  23 Operator Builtin Code  18 MUL
+  Inputs: 80 4
+  Outputs: 83
+Node  24 Operator Builtin Code   0 ADD
+  Inputs: 81 83
+  Outputs: 84
+Node  25 Operator Builtin Code  19 RELU
+  Inputs: 83
+  Outputs: 85
+Node  26 Operator Builtin Code   3 CONV_2D
+  Inputs: 82 22 18
+  Outputs: 86
+  Temporaries: 253 254 255 256 257 258
+Node  27 Operator Builtin Code   3 CONV_2D
+  Inputs: 85 11 18
+  Outputs: 87
+  Temporaries: 259
+Node  28 Operator Builtin Code   0 ADD
+  Inputs: 86 87
+  Outputs: 88
+Node  29 Operator Builtin Code   3 CONV_2D
+  Inputs: 84 10 18
+  Outputs: 89
+  Temporaries: 260
+Node  30 Operator Builtin Code   0 ADD
+  Inputs: 88 89
+  Outputs: 90
+Node  31 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 90
+  Outputs: 91
+Node  32 Operator Builtin Code  19 RELU
+  Inputs: 90
+  Outputs: 92
+Node  33 Operator Builtin Code  18 MUL
+  Inputs: 90 4
+  Outputs: 93
+Node  34 Operator Builtin Code   0 ADD
+  Inputs: 91 93
+  Outputs: 94
+Node  35 Operator Builtin Code   3 CONV_2D
+  Inputs: 94 9 18
+  Outputs: 95
+  Temporaries: 261
+Node  36 Operator Builtin Code  19 RELU
+  Inputs: 93
+  Outputs: 96
+Node  37 Operator Builtin Code   3 CONV_2D
+  Inputs: 96 8 18
+  Outputs: 97
+  Temporaries: 262
+Node  38 Operator Builtin Code   3 CONV_2D
+  Inputs: 92 23 18
+  Outputs: 98
+  Temporaries: 263 264 265 266 267 268
+Node  39 Operator Builtin Code   0 ADD
+  Inputs: 98 97
+  Outputs: 99
+Node  40 Operator Builtin Code   0 ADD
+  Inputs: 99 95
+  Outputs: 100
+Node  41 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 100
+  Outputs: 101
+Node  42 Operator Builtin Code  19 RELU
+  Inputs: 100
+  Outputs: 102
+Node  43 Operator Builtin Code   3 CONV_2D
+  Inputs: 102 24 18
+  Outputs: 103
+  Temporaries: 269 270 271 272 273 274
+Node  44 Operator Builtin Code  18 MUL
+  Inputs: 100 4
+  Outputs: 104
+Node  45 Operator Builtin Code   0 ADD
+  Inputs: 101 104
+  Outputs: 105
+Node  46 Operator Builtin Code   3 CONV_2D
+  Inputs: 105 7 18
+  Outputs: 106
+  Temporaries: 275
+Node  47 Operator Builtin Code  19 RELU
+  Inputs: 104
+  Outputs: 107
+Node  48 Operator Builtin Code   3 CONV_2D
+  Inputs: 107 6 18
+  Outputs: 108
+  Temporaries: 276
+Node  49 Operator Builtin Code   0 ADD
+  Inputs: 103 108
+  Outputs: 109
+Node  50 Operator Builtin Code   0 ADD
+  Inputs: 109 106
+  Outputs: 110
+Node  51 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 110
+  Outputs: 111
+Node  52 Operator Builtin Code   3 CONV_2D
+  Inputs: 111 5 16
+  Outputs: 112
+  Temporaries: 277
+Node  53 Operator Builtin Code  19 RELU
+  Inputs: 110
+  Outputs: 113
+Node  54 Operator Builtin Code   3 CONV_2D
+  Inputs: 113 25 16
+  Outputs: 114
+  Temporaries: 278 279 280 281 282 283
+Node  55 Operator Builtin Code   3 CONV_2D
+  Inputs: 114 26 16
+  Outputs: 115
+  Temporaries: 284 285 286 287 288 289
+Node  56 Operator Builtin Code   0 ADD
+  Inputs: 112 115
+  Outputs: 116
+Node  57 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 116
+  Outputs: 117
+Node  58 Operator Builtin Code  19 RELU
+  Inputs: 116
+  Outputs: 118
+Node  59 Operator Builtin Code   3 CONV_2D
+  Inputs: 118 27 16
+  Outputs: 119
+  Temporaries: 290 291 292 293 294 295
+Node  60 Operator Builtin Code  18 MUL
+  Inputs: 116 4
+  Outputs: 120
+Node  61 Operator Builtin Code   0 ADD
+  Inputs: 117 120
+  Outputs: 121
+Node  62 Operator Builtin Code   3 CONV_2D
+  Inputs: 121 28 16
+  Outputs: 122
+  Temporaries: 296 297 298 299 300
+Node  63 Operator Builtin Code  19 RELU
+  Inputs: 120
+  Outputs: 123
+Node  64 Operator Builtin Code   3 CONV_2D
+  Inputs: 123 29 16
+  Outputs: 124
+  Temporaries: 301 302 303 304 305
+Node  65 Operator Builtin Code   0 ADD
+  Inputs: 119 124
+  Outputs: 125
+Node  66 Operator Builtin Code   0 ADD
+  Inputs: 125 122
+  Outputs: 126
+Node  67 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 126
+  Outputs: 127
+Node  68 Operator Builtin Code  19 RELU
+  Inputs: 126
+  Outputs: 128
+Node  69 Operator Builtin Code   3 CONV_2D
+  Inputs: 128 30 16
+  Outputs: 129
+  Temporaries: 306 307 308 309 310 311
+Node  70 Operator Builtin Code  18 MUL
+  Inputs: 126 4
+  Outputs: 130
+Node  71 Operator Builtin Code   0 ADD
+  Inputs: 127 130
+  Outputs: 131
+Node  72 Operator Builtin Code   3 CONV_2D
+  Inputs: 131 31 16
+  Outputs: 132
+  Temporaries: 312 313 314 315 316
+Node  73 Operator Builtin Code  19 RELU
+  Inputs: 130
+  Outputs: 133
+Node  74 Operator Builtin Code   3 CONV_2D
+  Inputs: 133 32 16
+  Outputs: 134
+  Temporaries: 317 318 319 320 321
+Node  75 Operator Builtin Code   0 ADD
+  Inputs: 129 134
+  Outputs: 135
+Node  76 Operator Builtin Code   0 ADD
+  Inputs: 135 132
+  Outputs: 136
+Node  77 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 136
+  Outputs: 137
+Node  78 Operator Builtin Code  19 RELU
+  Inputs: 136
+  Outputs: 138
+Node  79 Operator Builtin Code   3 CONV_2D
+  Inputs: 138 33 16
+  Outputs: 139
+  Temporaries: 322 323 324 325 326 327
+Node  80 Operator Builtin Code  18 MUL
+  Inputs: 136 4
+  Outputs: 140
+Node  81 Operator Builtin Code   0 ADD
+  Inputs: 137 140
+  Outputs: 141
+Node  82 Operator Builtin Code   3 CONV_2D
+  Inputs: 141 34 16
+  Outputs: 142
+  Temporaries: 328 329 330 331 332
+Node  83 Operator Builtin Code  19 RELU
+  Inputs: 140
+  Outputs: 143
+Node  84 Operator Builtin Code   3 CONV_2D
+  Inputs: 143 35 16
+  Outputs: 144
+  Temporaries: 333 334 335 336 337
+Node  85 Operator Builtin Code   0 ADD
+  Inputs: 139 144
+  Outputs: 145
+Node  86 Operator Builtin Code   0 ADD
+  Inputs: 145 142
+  Outputs: 146
+Node  87 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 146
+  Outputs: 147
+Node  88 Operator Builtin Code  19 RELU
+  Inputs: 146
+  Outputs: 148
+Node  89 Operator Builtin Code   3 CONV_2D
+  Inputs: 148 36 16
+  Outputs: 149
+  Temporaries: 338 339 340 341 342 343
+Node  90 Operator Builtin Code  18 MUL
+  Inputs: 146 4
+  Outputs: 150
+Node  91 Operator Builtin Code   0 ADD
+  Inputs: 147 150
+  Outputs: 151
+Node  92 Operator Builtin Code   3 CONV_2D
+  Inputs: 151 37 16
+  Outputs: 152
+  Temporaries: 344 345 346 347 348
+Node  93 Operator Builtin Code  19 RELU
+  Inputs: 150
+  Outputs: 153
+Node  94 Operator Builtin Code   3 CONV_2D
+  Inputs: 153 38 16
+  Outputs: 154
+  Temporaries: 349 350 351 352 353
+Node  95 Operator Builtin Code   0 ADD
+  Inputs: 149 154
+  Outputs: 155
+Node  96 Operator Builtin Code   0 ADD
+  Inputs: 155 152
+  Outputs: 156
+Node  97 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 156
+  Outputs: 157
+Node  98 Operator Builtin Code  19 RELU
+  Inputs: 156
+  Outputs: 158
+Node  99 Operator Builtin Code   3 CONV_2D
+  Inputs: 158 39 16
+  Outputs: 159
+  Temporaries: 354 355 356 357 358 359
+Node 100 Operator Builtin Code  18 MUL
+  Inputs: 156 4
+  Outputs: 160
+Node 101 Operator Builtin Code   0 ADD
+  Inputs: 157 160
+  Outputs: 161
+Node 102 Operator Builtin Code   3 CONV_2D
+  Inputs: 161 40 16
+  Outputs: 162
+  Temporaries: 360 361 362 363 364
+Node 103 Operator Builtin Code  19 RELU
+  Inputs: 160
+  Outputs: 163
+Node 104 Operator Builtin Code   3 CONV_2D
+  Inputs: 163 41 16
+  Outputs: 164
+  Temporaries: 365 366 367 368 369
+Node 105 Operator Builtin Code   0 ADD
+  Inputs: 159 164
+  Outputs: 165
+Node 106 Operator Builtin Code   0 ADD
+  Inputs: 165 162
+  Outputs: 166
+Node 107 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 166
+  Outputs: 167
+Node 108 Operator Builtin Code   3 CONV_2D
+  Inputs: 167 42 17
+  Outputs: 168
+  Temporaries: 370 371 372 373 374
+Node 109 Operator Builtin Code  19 RELU
+  Inputs: 166
+  Outputs: 169
+Node 110 Operator Builtin Code   3 CONV_2D
+  Inputs: 169 43 17
+  Outputs: 170
+  Temporaries: 375 376 377 378 379 380
+Node 111 Operator Builtin Code   3 CONV_2D
+  Inputs: 170 44 17
+  Outputs: 171
+  Temporaries: 381 382 383 384 385 386
+Node 112 Operator Builtin Code   0 ADD
+  Inputs: 168 171
+  Outputs: 172
+Node 113 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 172
+  Outputs: 173
+Node 114 Operator Builtin Code  19 RELU
+  Inputs: 172
+  Outputs: 174
+Node 115 Operator Builtin Code   3 CONV_2D
+  Inputs: 174 45 17
+  Outputs: 175
+  Temporaries: 387 388 389 390 391 392
+Node 116 Operator Builtin Code  18 MUL
+  Inputs: 172 4
+  Outputs: 176
+Node 117 Operator Builtin Code   0 ADD
+  Inputs: 173 176
+  Outputs: 177
+Node 118 Operator Builtin Code   3 CONV_2D
+  Inputs: 177 46 17
+  Outputs: 178
+  Temporaries: 393 394 395 396 397
+Node 119 Operator Builtin Code  19 RELU
+  Inputs: 176
+  Outputs: 179
+Node 120 Operator Builtin Code   3 CONV_2D
+  Inputs: 179 47 17
+  Outputs: 180
+  Temporaries: 398 399 400 401 402
+Node 121 Operator Builtin Code   0 ADD
+  Inputs: 175 180
+  Outputs: 181
+Node 122 Operator Builtin Code   0 ADD
+  Inputs: 181 178
+  Outputs: 182
+Node 123 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 182
+  Outputs: 183
+Node 124 Operator Builtin Code  19 RELU
+  Inputs: 182
+  Outputs: 184
+Node 125 Operator Builtin Code   3 CONV_2D
+  Inputs: 184 48 17
+  Outputs: 185
+  Temporaries: 403 404 405 406 407 408
+Node 126 Operator Builtin Code  18 MUL
+  Inputs: 182 4
+  Outputs: 186
+Node 127 Operator Builtin Code   0 ADD
+  Inputs: 183 186
+  Outputs: 187
+Node 128 Operator Builtin Code   3 CONV_2D
+  Inputs: 187 49 17
+  Outputs: 188
+  Temporaries: 409 410 411 412 413
+Node 129 Operator Builtin Code  19 RELU
+  Inputs: 186
+  Outputs: 189
+Node 130 Operator Builtin Code   3 CONV_2D
+  Inputs: 189 50 17
+  Outputs: 190
+  Temporaries: 414 415 416 417 418
+Node 131 Operator Builtin Code   0 ADD
+  Inputs: 185 190
+  Outputs: 191
+Node 132 Operator Builtin Code   0 ADD
+  Inputs: 191 188
+  Outputs: 192
+Node 133 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 192
+  Outputs: 193
+Node 134 Operator Builtin Code  19 RELU
+  Inputs: 192
+  Outputs: 194
+Node 135 Operator Builtin Code   3 CONV_2D
+  Inputs: 194 51 17
+  Outputs: 195
+  Temporaries: 419 420 421 422 423 424
+Node 136 Operator Builtin Code  18 MUL
+  Inputs: 192 4
+  Outputs: 196
+Node 137 Operator Builtin Code   0 ADD
+  Inputs: 193 196
+  Outputs: 197
+Node 138 Operator Builtin Code   3 CONV_2D
+  Inputs: 197 52 17
+  Outputs: 198
+  Temporaries: 425 426 427 428 429
+Node 139 Operator Builtin Code  19 RELU
+  Inputs: 196
+  Outputs: 199
+Node 140 Operator Builtin Code   3 CONV_2D
+  Inputs: 199 53 17
+  Outputs: 200
+  Temporaries: 430 431 432 433 434
+Node 141 Operator Builtin Code   0 ADD
+  Inputs: 195 200
+  Outputs: 201
+Node 142 Operator Builtin Code   0 ADD
+  Inputs: 201 198
+  Outputs: 202
+Node 143 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 202
+  Outputs: 203
+Node 144 Operator Builtin Code  19 RELU
+  Inputs: 202
+  Outputs: 204
+Node 145 Operator Builtin Code   3 CONV_2D
+  Inputs: 204 54 17
+  Outputs: 205
+  Temporaries: 435 436 437 438 439 440
+Node 146 Operator Builtin Code  18 MUL
+  Inputs: 202 4
+  Outputs: 206
+Node 147 Operator Builtin Code   0 ADD
+  Inputs: 203 206
+  Outputs: 207
+Node 148 Operator Builtin Code   3 CONV_2D
+  Inputs: 207 55 17
+  Outputs: 208
+  Temporaries: 441 442 443 444 445
+Node 149 Operator Builtin Code  19 RELU
+  Inputs: 206
+  Outputs: 209
+Node 150 Operator Builtin Code   3 CONV_2D
+  Inputs: 209 56 17
+  Outputs: 210
+  Temporaries: 446 447 448 449 450
+Node 151 Operator Builtin Code   0 ADD
+  Inputs: 205 210
+  Outputs: 211
+Node 152 Operator Builtin Code   0 ADD
+  Inputs: 211 208
+  Outputs: 212
+Node 153 Operator Builtin Code   1 AVERAGE_POOL_2D
+  Inputs: 212
+  Outputs: 213
+Node 154 Operator Builtin Code  19 RELU
+  Inputs: 212
+  Outputs: 214
+Node 155 Operator Builtin Code   3 CONV_2D
+  Inputs: 214 57 17
+  Outputs: 215
+  Temporaries: 451 452 453 454 455 456
+Node 156 Operator Builtin Code  18 MUL
+  Inputs: 212 4
+  Outputs: 216
+Node 157 Operator Builtin Code   0 ADD
+  Inputs: 213 216
+  Outputs: 217
+Node 158 Operator Builtin Code   3 CONV_2D
+  Inputs: 217 58 17
+  Outputs: 218
+  Temporaries: 457 458 459 460 461
+Node 159 Operator Builtin Code  19 RELU
+  Inputs: 216
+  Outputs: 219
+Node 160 Operator Builtin Code   3 CONV_2D
+  Inputs: 219 59 17
+  Outputs: 220
+  Temporaries: 462 463 464 465 466
+Node 161 Operator Builtin Code   0 ADD
+  Inputs: 215 220
+  Outputs: 221
+Node 162 Operator Builtin Code   0 ADD
+  Inputs: 221 218
+  Outputs: 222
+Node 163 Operator Builtin Code  18 MUL
+  Inputs: 222 2
+  Outputs: 223
+Node 164 Operator Builtin Code   0 ADD
+  Inputs: 223 17
+  Outputs: 224
+Node 165 Operator Builtin Code  40 MEAN
+  Inputs: 224 3
+  Outputs: 225
+  Temporaries: 228 229 230
+Node 166 Operator Builtin Code   9 FULLY_CONNECTED
+  Inputs: 225 1 -1
+  Outputs: 226
+Node 167 Operator Builtin Code  25 SOFTMAX
+  Inputs: 226
+  Outputs: 227
