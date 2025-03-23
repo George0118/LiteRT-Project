@@ -4,6 +4,36 @@
     <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\testing\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_0\model_0_data.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_1\model_1_data.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_2\model_2_data.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_3\model_3_data.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_4\model_4_data.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_5\model_5_data.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_6\model_6_data.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_7\model_7_data.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_8\model_8_data.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_9\model_9_data.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\testing\CMakeLists.txt" />
