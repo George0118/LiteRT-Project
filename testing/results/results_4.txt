@@ -1,0 +1,2 @@
+Total model memory usage: 3152.55 KB
+Peak RAM usage: 14188.00 KB

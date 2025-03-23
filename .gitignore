@@ -2,4 +2,5 @@
 /Scripts
 /Include
 /tflite-dist
+__pycache__/
 pyvenv.cfg

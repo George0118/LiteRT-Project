@@ -3,23 +3,13 @@
 #include <memory>
 #include <string>
 #include <vector>
+#include <windows.h>
+#include <psapi.h>
 #include <opencv2/opencv.hpp>
 #include "tensorflow/lite/interpreter.h"
 #include "tensorflow/lite/kernels/register.h"
 #include "tensorflow/lite/model.h"
 #include "tensorflow/lite/optional_debug_tools.h"
-
-// Models
-#include "model_0_data.h"
-#include "model_1_data.h"
-#include "model_2_data.h"
-#include "model_3_data.h"
-#include "model_4_data.h"
-#include "model_5_data.h"
-#include "model_6_data.h"
-#include "model_7_data.h"
-#include "model_8_data.h"
-#include "model_9_data.h"
 
 #define TFLITE_MINIMAL_CHECK(x)                                  \
     if (!(x))                                                    \
@@ -28,6 +18,13 @@
         exit(1);                                                 \
     }
 
+size_t GetPeakMemoryUsage() {
+    PROCESS_MEMORY_COUNTERS pmc;
+    if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc))) {
+        return pmc.PeakWorkingSetSize;
+    }
+    return 0;
+}
 
 // Function to run inference on a single image
 
@@ -92,10 +89,22 @@ int main(int argc, char *argv[]) {
     // Allocate tensor buffers.
     TFLITE_MINIMAL_CHECK(interpreter->AllocateTensors() == kTfLiteOk);
 
+    // Run inference on 10 images
     for (int i = 0; i < 10; i++) {
         std::string image_path = images_directory + "\\image_" + std::to_string(i) + ".jpg";
         RunInference(interpreter, image_path);
     }
+
+    // Calculate Memory Usage
+    size_t total_model_memory = 0;
+    for (int i = 0; i < interpreter->tensors_size(); i++) {
+        TfLiteTensor* tensor = interpreter->tensor(i);
+        total_model_memory += tensor->bytes;
+    }
+    printf("Total model memory usage: %.2f KB\n", total_model_memory / 1024.0);
+
+    size_t peakMemory = GetPeakMemoryUsage();
+    printf("Peak RAM usage: %.2f KB\n", peakMemory / 1024.0);
 
     return 0;
 }

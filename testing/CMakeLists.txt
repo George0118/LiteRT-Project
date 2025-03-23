@@ -30,16 +30,6 @@ INCLUDE_DIRECTORIES(${OpenCV_INCLUDE_DIRS})
 
 set(SOURCES
     main.cpp  # Your main program
-    ../models/model_result/model_0/model_0_data.cc
-    ../models/model_result/model_1/model_1_data.cc
-    ../models/model_result/model_2/model_2_data.cc
-    ../models/model_result/model_3/model_3_data.cc
-    ../models/model_result/model_4/model_4_data.cc
-    ../models/model_result/model_5/model_5_data.cc
-    ../models/model_result/model_6/model_6_data.cc
-    ../models/model_result/model_7/model_7_data.cc
-    ../models/model_result/model_8/model_8_data.cc
-    ../models/model_result/model_9/model_9_data.cc
 )
 
 add_executable(TFLiteCheck ${SOURCES})

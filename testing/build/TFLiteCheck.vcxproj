@@ -385,16 +385,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\testing\main.cpp" />
-    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_0\model_0_data.cc" />
-    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_1\model_1_data.cc" />
-    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_2\model_2_data.cc" />
-    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_3\model_3_data.cc" />
-    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_4\model_4_data.cc" />
-    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_5\model_5_data.cc" />
-    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_6\model_6_data.cc" />
-    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_7\model_7_data.cc" />
-    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_8\model_8_data.cc" />
-    <ClCompile Include="C:\Users\gmyst\Desktop\Work\Delft\LiteRT-Project\models\model_result\model_9\model_9_data.cc" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

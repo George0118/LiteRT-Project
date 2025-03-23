@@ -1,15 +1,42 @@
 import tensorflow as tf
-import subprocess
+import numpy as np
+import cv2
 import os
 
+image_folder = '../images'
+input_shape = (32, 32, 3)
+
+# Function to load and preprocess images
+def load_and_preprocess_image(image_path):
+    image = cv2.imread(image_path)
+    image = cv2.resize(image, (input_shape[0], input_shape[1]))  # Resize to model input size
+    image = image / 255.0  # Normalize
+    image = np.expand_dims(image, axis=0)  # Add batch dimension
+    return image
+
+# Function to create a representative dataset (returns batches of images)
+def representative_dataset():
+    # List all images in the folder
+    image_paths = [os.path.join(image_folder, fname) for fname in os.listdir(image_folder)]
+    
+    for image_path in image_paths:
+        image = load_and_preprocess_image(image_path)
+        yield [image.astype(np.float32)]  
+        
+        
 # Paths for input models and output converted models
 model_paths = [f"./model_test/model_{i}" for i in range(10)]
 converted_model_paths = [f"./model_result/model_{i}" for i in range(10)]
+input_shape = (32,32,3)
 
 for i, path in enumerate(model_paths):
     # Convert the TensorFlow model to a TFLite model
     converter = tf.lite.TFLiteConverter.from_saved_model(path)
     converter.optimizations = [tf.lite.Optimize.DEFAULT]
+    # converter.representative_dataset = representative_dataset
+    # converter.target_spec.supported_ops = [tf.lite.OpsSet.TFLITE_BUILTINS_INT8]
+    # converter.inference_input_type = tf.uint8
+    # converter.inference_output_type = tf.uint8
     tflite_model = converter.convert()
 
     # Create directory if it doesn't exist
@@ -17,47 +44,9 @@ for i, path in enumerate(model_paths):
 
     # Define model file names
     tflite_filename = f"{converted_model_paths[i]}/converted_model.tflite"
-    cc_filename = f"{converted_model_paths[i]}/model_{i}_data.cc"
-    h_filename = f"{converted_model_paths[i]}/model_{i}_data.h"
 
     # Save the TFLite model
     with open(tflite_filename, "wb") as f:
         f.write(tflite_model)
 
-    # Generate the .cc file using xxd
-    with open(cc_filename, "w") as cc_file:
-        subprocess.run(
-            ["C:/Program Files/Git/usr/bin/xxd.exe", "-i", tflite_filename],
-            stdout=cc_file,
-            check=True
-        )
-
-    # Read the generated C array name from the .cc file
-    with open(cc_filename, "r") as cc_file:
-        lines = cc_file.readlines()
-
-    # Extract the array name from the first line (typically "unsigned char converted_model_tflite[]")
-    array_name = None
-    for line in lines:
-        if "unsigned char" in line and "[" in line:
-            array_name = line.split()[2]  # Extracts the variable name
-            array_name = array_name[:-2]
-            break
-
-    if not array_name:
-        raise ValueError("Failed to extract model array name from .cc file.")
-
-    # Create the corresponding .h file
-    with open(h_filename, "w") as h_file:
-        h_file.write(f"""#ifndef MODEL_{i}_DATA_H_
-#define MODEL_{i}_DATA_H_
-
-#include <cstddef>
-
-extern const unsigned char {array_name}[];
-extern const unsigned int {array_name}_len;
-
-#endif  // MODEL_{i}_DATA_H_
-""")
-
-print("Conversion complete: TFLite models, .cc, and .h files saved in the model_result folder.")
+print("Conversion complete!")
