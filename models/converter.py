@@ -2,6 +2,7 @@ import tensorflow as tf
 import numpy as np
 import cv2
 import os
+import subprocess
 
 image_folder = '../images'
 input_shape = (32, 32, 3)
@@ -33,10 +34,11 @@ for i, path in enumerate(model_paths):
     # Convert the TensorFlow model to a TFLite model
     converter = tf.lite.TFLiteConverter.from_saved_model(path)
     converter.optimizations = [tf.lite.Optimize.DEFAULT]
-    # converter.representative_dataset = representative_dataset
-    # converter.target_spec.supported_ops = [tf.lite.OpsSet.TFLITE_BUILTINS_INT8]
-    # converter.inference_input_type = tf.uint8
-    # converter.inference_output_type = tf.uint8
+    converter.representative_dataset = representative_dataset
+    converter.target_spec.supported_ops = [tf.lite.OpsSet.TFLITE_BUILTINS_INT8]
+    converter.inference_input_type = tf.uint8
+    converter.inference_output_type = tf.uint8
+    converter.target_spec.supported_types = [tf.int8]
     tflite_model = converter.convert()
 
     # Create directory if it doesn't exist
@@ -48,5 +50,15 @@ for i, path in enumerate(model_paths):
     # Save the TFLite model
     with open(tflite_filename, "wb") as f:
         f.write(tflite_model)
+        
+    cc_filename = f"{converted_model_paths[i]}/model_{i}_data.cc"
+
+    # Generate the .cc file using xxd
+    with open(cc_filename, "w") as cc_file:
+        subprocess.run(
+            ["C:/Program Files/Git/usr/bin/xxd.exe", "-i", tflite_filename],
+            stdout=cc_file,
+            check=True
+        )
 
 print("Conversion complete!")

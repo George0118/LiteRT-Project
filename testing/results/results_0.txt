@@ -1,2 +1,4 @@
-Total model memory usage: 3320.98 KB
-Peak RAM usage: 14268.00 KB
+Loading model: ../models/model_result/model_0/model_0_data.cc
+--- Inferance Complete ---
+Peak RAM usage: 925.24 KB
+Model Size: 1871.7099609375 KB

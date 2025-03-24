@@ -9,12 +9,11 @@ def calculate_tensor_memory_usage(tensor_details):
     for dim in tensor_details['shape']:
         num_elements *= dim
 
-    dtype = tensor_details['dtype']
+    dtype = tensor_details['dtype'].__name__
     
     dtype_sizes = {
-        'numpy.float32': 4,  # 4 bytes for float32
-        'numpy.int8': 1,     # 1 byte for int8
-        'numpy.uint8': 1,    # 1 byte for uint8
+        'int8': 1,
+        'uint8': 1, 
     }
     
     # Get the size per element (in bytes)

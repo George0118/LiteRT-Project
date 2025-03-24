@@ -1,3 +1,0 @@
-C:/Users/gmyst/Desktop/Work/Delft/LiteRT-Project/testing/build/CMakeFiles/TFLiteCheck.dir
-C:/Users/gmyst/Desktop/Work/Delft/LiteRT-Project/testing/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/gmyst/Desktop/Work/Delft/LiteRT-Project/testing/build/CMakeFiles/ZERO_CHECK.dir
