@@ -1,6 +1,8 @@
-Loading model: ../models/model_result/model_9/model_9_data.cc
---- Inferance Complete ---
-Peak RAM usage: 205.73 KB
+----- Model 9 -----
+
+Inferance Complete!
+
+Peak RAM usage: 205.59 KB
 Model Size: 580.40 KB
 Total MACs: 19.07 M
-Average Latency: 0.5134700040798634 ms
+Average CPU Latency: 0.456 ms

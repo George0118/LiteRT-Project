@@ -1,6 +1,8 @@
-Loading model: ../models/model_result/model_3/model_3_data.cc
---- Inferance Complete ---
-Peak RAM usage: 928.59 KB
+----- Model 3 -----
+
+Inferance Complete!
+
+Peak RAM usage: 928.45 KB
 Model Size: 2011.71 KB
 Total MACs: 125.97 M
-Average Latency: 2.811129984911531 ms
+Average CPU Latency: 2.218 ms

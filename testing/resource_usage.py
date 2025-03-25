@@ -1,11 +1,7 @@
 from functools import reduce
 
 def calculate_tensor_memory_usage(tensor):
-    """
-    Calculate the memory usage of each tensor based on its details.
-    :param tensor_details: Tensor details including shape and data type.
-    :return: Memory usage in bytes.
-    """
+    """Calculate the memory usage of each tensor based on its details."""
 
     num_elements = 1
     for dim in tensor['shape']:
@@ -39,10 +35,10 @@ def calculate_tensor_MACs(interpreter, tensor):
     shape = tensor['shape']
     name = tensor['name']
     
-    if not "model" in name:   # If the tensor does not concern a layer
+    if not "model" in name:   # If the tensor does not concern a model tensor
         return 0
     
-    if "conv2d" in name:  # Conv2D Layer (Batch, H, W, Channels)
+    if "conv2d" in name:  # Conv2D type tensor (Batch, H, W, Channels)
         input_channels = shape[3]
         output_channels = shape[3]
         kernel_h, kernel_w = 3,3        # Assume 3x3 Convolution
@@ -50,23 +46,23 @@ def calculate_tensor_MACs(interpreter, tensor):
         # MACs Formula for Conv2D: (H * W * C_in) * (K_H * K_W * C_out)
         macs = shape[1] * shape[2] * input_channels * kernel_h * kernel_w * output_channels
 
-    elif "re_lu" in name:  # ReLu Layer
+    elif "re_lu" in name:  # ReLu type tensor
         
         # Apply Relu to each data inside the tensor
         macs = shape[1] * shape[2] * shape[3]
     
-    elif "add" in name:     # Add Layer
+    elif "add" in name:     # Add type tensor
         
         # Apply Add Operator to each data of the input tensors
         macs = shape[1] * shape[2] * shape[3]
         
-    elif "global_average_pooling2d" in name:    # 2D Global Average Pooling
+    elif "global_average_pooling2d" in name:    # 2D Global Average Pooling type tensor
         input_shape = interpreter.get_tensor_details()[tensor['index']-1]['shape']
         
         # Height x Width for each Channel
         macs = input_shape[1] * input_shape[2] * input_shape[3]
         
-    elif "average_pooling2d" in name:   # 2D Pooling Layer
+    elif "average_pooling2d" in name:   # 2D Pooling type tensor
         input_shape = interpreter.get_tensor_details()[tensor['index']-1]['shape']
         input_channels = input_shape[3]
         output_channels = shape[3]
@@ -75,12 +71,12 @@ def calculate_tensor_MACs(interpreter, tensor):
         # MACs Formula for Conv2D: (H * W * C_in) * (K_H * K_W * C_out)
         macs = input_shape[1] * input_shape[2] * input_channels * pool_h * pool_w * output_channels
         
-    elif "multiply" in name:   # Multiplication Layer
+    elif "multiply" in name:   # Multiplication type tensor
         
         # Apply Mul Operator to each data of the input tensors
         macs = shape[1] * shape[2] * shape[3]
         
-    elif "dense" in name:       # Dense Layer
+    elif "dense" in name:       # Dense type tensor
         input_shape = interpreter.get_tensor_details()[tensor['index']-1]['shape']
         input_neurons = reduce(lambda x, y: x * y, input_shape[1:])     # Flatten input
         output_neurons = shape[1]
@@ -89,8 +85,8 @@ def calculate_tensor_MACs(interpreter, tensor):
         macs = input_neurons * output_neurons
         
     else:
-        print("Unsupported Layer!")
-        macs = 0  # Skip unsupported layers
+        print("Unsupported model tensor!")
+        macs = 0  # Skip unsupported model tensors
     
     return macs
 

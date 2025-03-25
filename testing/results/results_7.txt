@@ -1,6 +1,8 @@
-Loading model: ../models/model_result/model_7/model_7_data.cc
---- Inferance Complete ---
-Peak RAM usage: 206.10 KB
+----- Model 7 -----
+
+Inferance Complete!
+
+Peak RAM usage: 205.96 KB
 Model Size: 596.40 KB
 Total MACs: 34.67 M
-Average Latency: 0.6625199923291802 ms
+Average CPU Latency: 0.649 ms

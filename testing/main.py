@@ -33,6 +33,8 @@ if __name__ == "__main__":
     model_name = sys.argv[1]
     model_path_cc = f"../models/model_result/{model_name}/{model_name}_data.cc"
     
+    print(f"----- Model {model_name.split('_')[1]} -----\n")
+    
     tracemalloc.start()
     
     # Load TFLite model
@@ -43,7 +45,7 @@ if __name__ == "__main__":
     input_shape = input_details[0]['shape']
     input_type = input_details[0]['dtype']
 
-    # Load and preprocess images
+    # Load images and Run Inference
     image_dir = "../converted_images"
     image_paths = sorted([os.path.join(image_dir, f) for f in os.listdir(image_dir)])
     
@@ -60,8 +62,11 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"Error processing {image_path}: {e}")
             
+    print("Inferance Complete!\n")
+    
+    # Calculate Metrics (Memory, Model Size, MACs, Latency)
+    
     avg_latency /= len(image_paths)
-    print("--- Inferance Complete ---")
     
     _, peak = tracemalloc.get_traced_memory()
     print(f"Peak RAM usage: {peak/1024 :.2f} KB") 
@@ -72,4 +77,4 @@ if __name__ == "__main__":
     
     print(f"Total MACs: {calculate_MACs(interpreter)/10**6 :.2f} M")
     
-    print(f"Average Latency: {avg_latency * 10**3} ms")
+    print(f"Average CPU Latency: {avg_latency * 10**3 :.3f} ms")
