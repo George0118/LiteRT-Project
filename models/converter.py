@@ -5,6 +5,7 @@ import os
 import subprocess
 
 image_folder = '../images'
+converted_images_folder = '../converted_images'
 input_shape = (32, 32, 3)
 
 # Function to load and preprocess images
@@ -61,4 +62,12 @@ for i, path in enumerate(model_paths):
             check=True
         )
 
+image_paths = sorted([os.path.join(image_folder, f) for f in os.listdir(image_folder)])
+
+for i,image_path in enumerate(image_paths):
+    image = load_and_preprocess_image(image_path)
+    image = (image[0]).astype(np.uint8)
+    converted_image_path = converted_images_folder+f"/converted_image_{i}.jpg"
+    cv2.imwrite(converted_image_path, image)
+    
 print("Conversion complete!")

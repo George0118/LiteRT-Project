@@ -1,4 +1,6 @@
 Loading model: ../models/model_result/model_1/model_1_data.cc
 --- Inferance Complete ---
 Peak RAM usage: 825.80 KB
-Model Size: 1563.2724609375 KB
+Model Size: 1563.27 KB
+Total MACs: 105.88 M
+Average Latency: 2.1272200043313205 ms
