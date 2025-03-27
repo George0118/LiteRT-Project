@@ -4,13 +4,11 @@ import cv2
 import os
 import subprocess
 
-image_folder = '../images'
 converted_images_folder = '../converted_images'
 input_shape = (32, 32, 3)
 
-def load_and_preprocess_image(image_path):
-    """Function to load and preprocess images"""
-    image = cv2.imread(image_path)
+def preprocess_image(image):
+    """Function to preprocess images"""
     image = cv2.resize(image, (input_shape[0], input_shape[1]))  # Resize to model input size
     image = image / 255.0  # Normalize
     image = np.expand_dims(image, axis=0)  # Add batch dimension
@@ -18,11 +16,14 @@ def load_and_preprocess_image(image_path):
 
 def representative_dataset():
     """Function to generate a representative dataset for model quantization"""
-    image_paths = [os.path.join(image_folder, fname) for fname in os.listdir(image_folder)]
+    # Load the CIFAR-10 dataset
+    (_, _), (x_test, _) = tf.keras.datasets.cifar10.load_data()
     
-    for image_path in image_paths:
-        image = load_and_preprocess_image(image_path)
-        yield [image.astype(np.float32)]  
+    x_test = x_test[:1000]
+    
+    for image in x_test:
+        image = preprocess_image(image)
+        yield [image.astype(np.float32)]        
         
 
 model_paths = [f"./model_test/model_{i}" for i in range(10)]
@@ -60,10 +61,12 @@ for i, path in enumerate(model_paths):
         )
 
 # Preprocess and save the images so that they can instantly be used in model inference
-image_paths = sorted([os.path.join(image_folder, f) for f in os.listdir(image_folder)])
+(_, _), (x_test, _) = tf.keras.datasets.cifar10.load_data()
+    
+x_test = x_test[:10]
 
-for i,image_path in enumerate(image_paths):
-    image = load_and_preprocess_image(image_path)
+for i,image in enumerate(x_test):
+    image = preprocess_image(image)
     image = (image[0]).astype(np.uint8)
     converted_image_path = converted_images_folder+f"/converted_image_{i}.jpg"
     cv2.imwrite(converted_image_path, image)

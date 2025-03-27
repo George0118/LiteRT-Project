@@ -5,4 +5,4 @@ Inferance Complete!
 Peak RAM usage: 928.45 KB
 Model Size: 2011.71 KB
 Total MACs: 125.97 M
-Average CPU Latency: 2.218 ms
+Average CPU Latency: 3.044 ms
